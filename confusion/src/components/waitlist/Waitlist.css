@@ -1,3 +1,35 @@
 .waitlist__customers {
   background-color: hsl(242.07, 100%, 94.31%);
 }
+
+/* Leave Review Component */
+.review__components-svg1 {
+  background-image: url("../images/very_satisfied_black_24dp.svg");
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}
+.review__components-svg2 {
+  background-image: url("../images/satisfied_black_24dp.svg");
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}
+.review__components-svg3 {
+  background-image: url("../images/neutral_black_24dp.svg");
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}
+.review__components-svg4 {
+  background-image: url("../images/dissatisfied_black_24dp.svg");
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}
+.review__components-svg5 {
+  background-image: url("../images/very_dissatisfied_alt_black_24dp.svg");
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
+}

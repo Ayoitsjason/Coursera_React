@@ -15,11 +15,11 @@ const LeaveReviewComponent = (props) => {
           <h1 className="my-5">Leave a Review!</h1>
           <div className="container">
             <div>
-              <Button>Extremely Satisfied</Button>
-              <Button>Satisfied</Button>
-              <Button>Neautral</Button>
-              <Button>dissatisfied</Button>
-              <Button>Extremely dissatisfied</Button>
+              <Button className="review__components-svg1"></Button>
+              <Button className="review__components-svg2"></Button>
+              <Button className="review__components-svg3"></Button>
+              <Button className="review__components-svg4"></Button>
+              <Button className="review__components-svg5"></Button>
             </div>
             <div>
               <input />
