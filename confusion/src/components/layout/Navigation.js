@@ -8,7 +8,7 @@ const Navigation = () => {
       <Navbar.Brand className="mx-5" href="#home">
         Tippin
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mx-5" activeKey="/home">
           <Nav.Item>
