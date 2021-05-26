@@ -4,7 +4,7 @@ import "./Navigation.css";
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" fixed="top" expand="lg">
+    <Navbar bg="light" expand="lg">
       <Navbar.Brand className="mx-5" href="#home">
         Tippin
       </Navbar.Brand>
