@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
+import SideNavigationComponent from "../layout/SideNavigationComponent";
+import "./Waitlist.css";
 
 class Waitlist extends Component {
   constructor() {
@@ -59,11 +61,20 @@ class Waitlist extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="my-5">Waitlist</h1>
-        <Button className="mb-3">+ Add Guest</Button>
-        {this.state.customers.map((customer) =>
-          this.populateCustomers(customer)
-        )}
+        <Row>
+          <Col xs={3}>
+            <SideNavigationComponent />
+          </Col>
+          <Col xs={9}>
+            <div className="container">
+              <h1 className="my-5">Waitlist</h1>
+              <Button className="mb-3">+ Add Guest</Button>
+              {this.state.customers.map((customer) =>
+                this.populateCustomers(customer)
+              )}
+            </div>
+          </Col>
+        </Row>
       </div>
     );
   }
