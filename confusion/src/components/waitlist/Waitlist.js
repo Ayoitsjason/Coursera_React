@@ -38,7 +38,7 @@ class Waitlist extends Component {
   populateCustomers(customer) {
     return (
       <>
-        <div className="row border border-light p-3 m-1 rounded bg-light">
+        <div className="row border border-light p-3 m-2 rounded bg-light">
           <div className="col">
             <p className="font-weight-bold text-capitalize">
               {customer.firstName} {customer.lastName}
@@ -60,14 +60,14 @@ class Waitlist extends Component {
 
   render() {
     return (
-      <div className="container">
+      <>
         <Row>
-          <Col xs={3}>
+          <Col xs={2}>
             <SideNavigationComponent />
           </Col>
-          <Col xs={9}>
-            <div className="container">
-              <h1 className="my-5">Waitlist</h1>
+          <Col xs={10}>
+            <h1 className="my-5">Waitlist</h1>
+            <div className="container px-3">
               <Button className="mb-3">+ Add Guest</Button>
               {this.state.customers.map((customer) =>
                 this.populateCustomers(customer)
@@ -75,7 +75,7 @@ class Waitlist extends Component {
             </div>
           </Col>
         </Row>
-      </div>
+      </>
     );
   }
 }

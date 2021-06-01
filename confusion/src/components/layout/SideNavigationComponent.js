@@ -1,24 +1,30 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import "./SideNavigationComponent.css";
 
 const SideNavigationComponent = () => {
   return (
-    <Navbar className="flex-column" bg="light" expand="lg">
-      <Navbar.Brand className="mx-5" href="#home">
-        Tippin
-      </Navbar.Brand>
-      <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-        <Nav className="mx-5 flex-column" activeKey="/home">
-          <Nav.Item>
-            <Nav.Link href="#home">Login</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="#link">Signup</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className="side-navigation bg-light">
+      <Navbar className="flex-column" expand="lg">
+        <Navbar.Brand className="mx-5" href="#home">
+          Tippin
+        </Navbar.Brand>
+        <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+          <Nav className="mx-5 flex-column" activeKey="/home">
+            <Nav.Item>
+              <Nav.Link href="#home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#link">Reviews</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#signout">Sign out</Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
   );
 };
 
