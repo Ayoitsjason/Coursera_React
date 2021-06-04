@@ -60,7 +60,7 @@ class Waitlist extends Component {
 
   render() {
     return (
-      <>
+      <div className="App">
         <Row>
           <Col xs={2}>
             <SideNavigationComponent />
@@ -75,7 +75,7 @@ class Waitlist extends Component {
             </div>
           </Col>
         </Row>
-      </>
+      </div>
     );
   }
 }
