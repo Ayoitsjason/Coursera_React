@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./components/layout/Navigation.js";
 import Waitlist from "./components/waitlist/Waitlist";
+import Login from "./components/waitlist/Login";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Waitlist />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
