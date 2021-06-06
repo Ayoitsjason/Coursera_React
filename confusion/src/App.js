@@ -5,6 +5,7 @@ import Navigation from "./components/layout/Navigation.js";
 import Waitlist from "./components/waitlist/Waitlist";
 import Login from "./components/waitlist/Login";
 import Signup from "./components/waitlist/Signup";
+import Nopage from "./components/Nopage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Waitlist />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<Nopage />} />
       </Routes>
     </BrowserRouter>
   );
