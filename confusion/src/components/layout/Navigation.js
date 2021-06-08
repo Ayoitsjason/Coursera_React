@@ -15,7 +15,7 @@ const Navigation = () => {
             <Nav.Link href="/login">Login</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="#link">Signup</Nav.Link>
+            <Nav.Link href="/signup">Signup</Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
