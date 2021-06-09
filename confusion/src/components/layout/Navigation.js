@@ -5,7 +5,7 @@ import "./Navigation.css";
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand className="mx-5" href="#home">
+      <Navbar.Brand className="mx-5" href="/">
         Tippin
       </Navbar.Brand>
       <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
