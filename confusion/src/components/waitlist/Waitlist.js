@@ -4,8 +4,8 @@ import SideNavigationComponent from "../layout/SideNavigationComponent";
 import "./Waitlist.css";
 
 class Waitlist extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       customers: [
         {
@@ -32,6 +32,7 @@ class Waitlist extends Component {
       ],
     };
     this.populateCustomers = this.populateCustomers.bind(this);
+    this.addGuestsClick = this.addGuestsClick.bind(this);
   }
 
   // Populates Customers
@@ -68,7 +69,7 @@ class Waitlist extends Component {
           <Col xs={10}>
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
-              <Button className="mb-3">+ Add Guest</Button>
+              <Button className="mb-3" onClick={}>+ Add Guest</Button>
               {this.state.customers.map((customer) =>
                 this.populateCustomers(customer)
               )}
