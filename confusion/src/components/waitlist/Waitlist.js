@@ -59,6 +59,11 @@ class Waitlist extends Component {
     );
   }
 
+  // Add Guest Button
+  addGuestsClick() {
+    this.props.navigate(`/addguest`);
+  }
+
   render() {
     return (
       <div className="App">
@@ -69,7 +74,9 @@ class Waitlist extends Component {
           <Col xs={10}>
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
-              <Button className="mb-3" onClick={}>+ Add Guest</Button>
+              <Button className="mb-3" onClick={() => this.addGuestsClick()}>
+                + Add Guest
+              </Button>
               {this.state.customers.map((customer) =>
                 this.populateCustomers(customer)
               )}
