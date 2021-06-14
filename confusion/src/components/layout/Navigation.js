@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -12,7 +13,9 @@ const Navigation = () => {
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mx-5" activeKey="/home">
           <Nav.Item>
-            <Nav.Link href="/login">Login</Nav.Link>
+            <LinkContainer to="/login">
+              <Nav.Link>Login</Nav.Link>
+            </LinkContainer>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/signup">Signup</Nav.Link>
