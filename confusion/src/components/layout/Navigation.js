@@ -6,9 +6,9 @@ import "./Navigation.css";
 const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand className="mx-5" href="/">
-        Tippin
-      </Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand className="mx-5">Tippin</Navbar.Brand>
+      </LinkContainer>
       <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mx-5" activeKey="/home">
