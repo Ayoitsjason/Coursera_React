@@ -18,7 +18,9 @@ const Navigation = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/signup">Signup</Nav.Link>
+            <Nav.Link as={Link} to="/signup">
+              Signup
+            </Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
