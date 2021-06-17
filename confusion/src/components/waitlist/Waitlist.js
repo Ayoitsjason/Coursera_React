@@ -67,11 +67,11 @@ class Waitlist extends Component {
   render() {
     return (
       <div className="App">
-        <Row>
+        <Row className="m-0">
           <Col xs={2}>
             <SideNavigationComponent />
           </Col>
-          <Col xs={10}>
+          <Col xs={9}>
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
               <Button className="mb-3" onClick={() => this.addGuestsClick()}>
