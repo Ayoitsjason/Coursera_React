@@ -1,12 +1,13 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./SideNavigationComponent.css";
 
 const SideNavigationComponent = () => {
   return (
     <div className="side-navigation bg-light">
       <Navbar className="flex-column" expand="lg">
-        <Navbar.Brand className="mx-5" href="#home">
+        <Navbar.Brand className="mx-5" as={Link} to="/">
           Tippin
         </Navbar.Brand>
         <Navbar.Toggle className="mx-5" aria-controls="basic-navbar-nav" />
