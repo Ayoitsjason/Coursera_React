@@ -14,7 +14,9 @@ const SideNavigationComponent = () => {
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav className="mx-5 flex-column" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Home
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#link">Reviews</Nav.Link>
