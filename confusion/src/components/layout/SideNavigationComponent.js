@@ -19,7 +19,9 @@ const SideNavigationComponent = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#link">Reviews</Nav.Link>
+              <Nav.Link as={Link} to="/reviews">
+                Reviews
+              </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#signout">Sign out</Nav.Link>
