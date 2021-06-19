@@ -7,6 +7,7 @@ import Login from "./components/waitlist/Login";
 import Signup from "./components/waitlist/Signup";
 import Nopage from "./components/Nopage";
 import AddGuestComponent from "./components/waitlist/AddGuestComponent";
+import ReviewsComponent from "./components/waitlist/ReviewsComponent";
 import { Component } from "react";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/addguest" element={<AddGuestComponent />} />
+          <Route path="/reviews" element={<ReviewsComponent />} />
           <Route path="*" element={<Nopage />} />
         </Routes>
       </BrowserRouter>
