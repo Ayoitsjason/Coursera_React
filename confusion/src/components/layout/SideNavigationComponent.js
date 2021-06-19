@@ -24,7 +24,9 @@ const SideNavigationComponent = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#signout">Sign out</Nav.Link>
+              <Nav.Link as={Link} to="/signout">
+                Sign out
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
