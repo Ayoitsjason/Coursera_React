@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 const Login = () => {
   const onSubmit = (props) => {
     console.log(props);
+    localStorage.setItem("User", props.username);
   };
 
   return (
