@@ -5,7 +5,7 @@ export const registerSuccessfulLogin = (username, password) => {
 };
 
 export const isUserLoggedIn = () => {
-  let user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME, username);
+  let user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
   if (!user) {
     return false;
   }

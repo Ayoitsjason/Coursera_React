@@ -1,10 +1,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
 
 const Login = () => {
   const onSubmit = (props) => {
-    console.log(props);
-    localStorage.setItem("User", props.username);
+    registerSuccessfulLogin(props.username);
   };
 
   return (
