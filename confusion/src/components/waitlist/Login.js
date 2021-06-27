@@ -1,10 +1,14 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
+import {
+  isUserLoggedIn,
+  registerSuccessfulLogin,
+} from "../authentication/AuthenticationService";
 
-const Login = () => {
-  const onSubmit = (props) => {
-    registerSuccessfulLogin(props.username);
+const Login = (props) => {
+  const onSubmit = (form) => {
+    registerSuccessfulLogin(form.username);
+    props.navigate("/");
   };
 
   return (

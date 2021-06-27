@@ -13,12 +13,13 @@ import { Component } from "react";
 class App extends Component {
   render() {
     const WaitlistWithNavigation = withNavigation(Waitlist);
+    const LoginWithNavigation = withNavigation(Login);
     return (
       <BrowserRouter>
         <Navigation />
         <Routes>
           <Route path="/" element={<WaitlistWithNavigation />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginWithNavigation />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/addguest" element={<AddGuestComponent />} />
           <Route path="/reviews" element={<ReviewsComponent />} />
