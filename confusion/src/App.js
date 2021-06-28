@@ -9,17 +9,35 @@ import Nopage from "./components/Nopage";
 import AddGuestComponent from "./components/waitlist/AddGuestComponent";
 import ReviewsComponent from "./components/waitlist/ReviewsComponent";
 import { Component } from "react";
+import { isUserLoggedIn } from "./components/authentication/AuthenticationService";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: false,
+    };
+    this.updateAuth = this.updateAuth.bind(this);
+  }
+
+  updateAuth() {
+    this.setState({
+      loggedIn: isUserLoggedIn(),
+    });
+  }
+
   render() {
     const WaitlistWithNavigation = withNavigation(Waitlist);
     const LoginWithNavigation = withNavigation(Login);
     return (
       <BrowserRouter>
-        <Navigation />
+        <Navigation loggedIn={this.state.loggedIn} />
         <Routes>
           <Route path="/" element={<WaitlistWithNavigation />} />
-          <Route path="/login" element={<LoginWithNavigation />} />
+          <Route
+            path="/login"
+            element={<LoginWithNavigation updateAuth={this.updateAuth} />}
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/addguest" element={<AddGuestComponent />} />
           <Route path="/reviews" element={<ReviewsComponent />} />
