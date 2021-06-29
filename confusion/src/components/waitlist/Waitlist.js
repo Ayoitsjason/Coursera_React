@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, Col, Row } from "react-bootstrap";
+import { isUserLoggedIn } from "../authentication/AuthenticationService";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import "./Waitlist.css";
 
@@ -30,6 +31,7 @@ class Waitlist extends Component {
           partySize: "2",
         },
       ],
+      isLoggedIn: isUserLoggedIn(),
     };
     this.populateCustomers = this.populateCustomers.bind(this);
     this.addGuestsClick = this.addGuestsClick.bind(this);
@@ -69,7 +71,7 @@ class Waitlist extends Component {
       <div className="App">
         <Row className="m-0">
           <Col xs={2}>
-            <SideNavigationComponent />
+            {this.state.isLoggedIn ? <SideNavigationComponent /> : null}
           </Col>
           <Col xs={9}>
             <h1 className="my-5">Waitlist</h1>
