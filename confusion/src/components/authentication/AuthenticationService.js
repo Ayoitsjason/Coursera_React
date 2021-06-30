@@ -11,3 +11,7 @@ export const isUserLoggedIn = () => {
   }
   return true;
 };
+
+export const logout = () => {
+  sessionStorage.removeItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
+};
