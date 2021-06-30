@@ -15,7 +15,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loggedIn: false,
+      loggedIn: isUserLoggedIn(),
     };
     this.updateAuth = this.updateAuth.bind(this);
   }
