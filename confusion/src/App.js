@@ -33,7 +33,10 @@ class App extends Component {
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />
         <Routes>
-          <Route path="/" element={<WaitlistWithNavigation />} />
+          <Route
+            path="/"
+            element={<WaitlistWithNavigation updateAuth={this.updateAuth} />}
+          />
           <Route
             path="/login"
             element={<LoginWithNavigation updateAuth={this.updateAuth} />}

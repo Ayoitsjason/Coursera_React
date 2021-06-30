@@ -2,8 +2,13 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./SideNavigationComponent.css";
+import { logout } from "../authentication/AuthenticationService";
 
-const SideNavigationComponent = () => {
+const SideNavigationComponent = (props) => {
+  const onClickLogout = () => {
+    logout();
+    console.log(props);
+  };
   return (
     <div className="side-navigation bg-light">
       <Navbar className="flex-column" expand="lg">
@@ -24,9 +29,7 @@ const SideNavigationComponent = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/signout">
-                Sign out
-              </Nav.Link>
+              <Nav.Link onClick={onClickLogout}>Sign out</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
