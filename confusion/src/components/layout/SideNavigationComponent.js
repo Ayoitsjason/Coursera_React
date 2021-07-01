@@ -5,9 +5,10 @@ import "./SideNavigationComponent.css";
 import { logout } from "../authentication/AuthenticationService";
 
 const SideNavigationComponent = (props) => {
+  console.log("side nav", props);
   const onClickLogout = () => {
     logout();
-    console.log(props);
+    props.updateAuth();
   };
   return (
     <div className="side-navigation bg-light">

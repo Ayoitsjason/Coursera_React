@@ -7,7 +7,7 @@ import "./Waitlist.css";
 class Waitlist extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    console.log("waitlist", props);
     this.state = {
       customers: [
         {
@@ -72,7 +72,9 @@ class Waitlist extends Component {
       <div className="App">
         <Row className="m-0">
           <Col xs={2}>
-            {this.state.isLoggedIn ? <SideNavigationComponent /> : null}
+            {this.state.isLoggedIn ? (
+              <SideNavigationComponent updateAuth={this.props.updateAuth} />
+            ) : null}
           </Col>
           <Col xs={9}>
             <h1 className="my-5">Waitlist</h1>
