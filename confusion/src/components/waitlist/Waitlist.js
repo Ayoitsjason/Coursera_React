@@ -11,6 +11,7 @@ class Waitlist extends Component {
     this.state = {
       customers: [
         {
+          id: "1",
           firstName: "becky",
           lastName: "ly",
           number: "11111111111",
@@ -18,6 +19,7 @@ class Waitlist extends Component {
           partySize: "2",
         },
         {
+          id: "2",
           firstName: "becky",
           lastName: "ly",
           number: "11111111111",
@@ -25,6 +27,7 @@ class Waitlist extends Component {
           partySize: "2",
         },
         {
+          id: "3",
           firstName: "becky",
           lastName: "ly",
           number: "11111111111",
