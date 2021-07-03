@@ -44,24 +44,25 @@ class Waitlist extends Component {
   // Populates Customers
   populateCustomers(customer) {
     return (
-      <>
-        <div className="row border border-light p-3 m-2 rounded bg-light">
-          <div className="col">
-            <p className="font-weight-bold text-capitalize">
-              {customer.firstName} {customer.lastName}
-            </p>
-          </div>
-          <div className="col-3">
-            <p>Number: {customer.number}</p>
-          </div>
-          <div className="col-2">
-            <p>Party Size: {customer.partySize}</p>
-          </div>
-          <div className="col">
-            <Button className="rounded-circle">&#10004;</Button>
-          </div>
+      <div
+        className="row border border-light p-3 m-2 rounded bg-light"
+        key={customer.id}
+      >
+        <div className="col">
+          <p className="font-weight-bold text-capitalize">
+            {customer.firstName} {customer.lastName}
+          </p>
         </div>
-      </>
+        <div className="col-3">
+          <p>Number: {customer.number}</p>
+        </div>
+        <div className="col-2">
+          <p>Party Size: {customer.partySize}</p>
+        </div>
+        <div className="col">
+          <Button className="rounded-circle">&#10004;</Button>
+        </div>
+      </div>
     );
   }
 
