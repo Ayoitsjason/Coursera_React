@@ -5,7 +5,6 @@ import "./SideNavigationComponent.css";
 import { logout } from "../authentication/AuthenticationService";
 
 const SideNavigationComponent = (props) => {
-  console.log("side nav", props);
   const onClickLogout = () => {
     logout();
     props.updateAuth();
