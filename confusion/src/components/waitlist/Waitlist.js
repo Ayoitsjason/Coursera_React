@@ -7,7 +7,6 @@ import "./Waitlist.css";
 class Waitlist extends Component {
   constructor(props) {
     super(props);
-    console.log("waitlist", props);
     this.state = {
       customers: [
         {
