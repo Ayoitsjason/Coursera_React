@@ -10,6 +10,7 @@ import AddGuestComponent from "./components/waitlist/AddGuestComponent";
 import ReviewsComponent from "./components/waitlist/ReviewsComponent";
 import { Component } from "react";
 import { isUserLoggedIn } from "./components/authentication/AuthenticationService";
+import LeaveReviewComponent from "./components/waitlist/LeaveReviewComponent";
 
 class App extends Component {
   constructor() {
@@ -36,6 +37,10 @@ class App extends Component {
           <Route
             path="/"
             element={<WaitlistWithNavigation updateAuth={this.updateAuth} />}
+          />
+          <Route
+            path="/leavereview/:business"
+            element={<LeaveReviewComponent />}
           />
           <Route
             path="/login"
