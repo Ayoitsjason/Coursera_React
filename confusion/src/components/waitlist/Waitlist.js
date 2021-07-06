@@ -82,8 +82,17 @@ class Waitlist extends Component {
           <Col xs={9}>
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
-              <Button className="mb-3" onClick={() => this.addGuestsClick()}>
+              <Button
+                className="mb-3 mx-1"
+                onClick={() => this.addGuestsClick()}
+              >
                 + Add Guest
+              </Button>
+              <Button
+                className="mb-3 mx-1"
+                onClick={() => this.addGuestsClick()}
+              >
+                + Leave a Review
               </Button>
               {this.state.customers.map((customer) =>
                 this.populateCustomers(customer)
