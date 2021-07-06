@@ -70,6 +70,11 @@ class Waitlist extends Component {
     this.props.navigate(`/addguest`);
   }
 
+  // Leave a review Button
+  addLeaveReviewClick() {
+    this.props.navigate(`/leavereview/:royals`);
+  }
+
   render() {
     return (
       <div className="App">
@@ -90,7 +95,7 @@ class Waitlist extends Component {
               </Button>
               <Button
                 className="mb-3 mx-1"
-                onClick={() => this.addGuestsClick()}
+                onClick={() => this.addLeaveReviewClick()}
               >
                 + Leave a Review
               </Button>
