@@ -47,7 +47,15 @@ class App extends Component {
             element={<LoginWithNavigation updateAuth={this.updateAuth} />}
           />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/addguest" element={<AddGuestComponent />} />
+          <Route
+            path="/addguest"
+            element={
+              <AddGuestComponent
+                isLoggedIn={this.state.loggedIn}
+                updateAuth={this.updateAuth}
+              />
+            }
+          />
           <Route path="/reviews" element={<ReviewsComponent />} />
           <Route path="*" element={<Nopage />} />
         </Routes>
