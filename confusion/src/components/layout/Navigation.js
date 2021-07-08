@@ -31,7 +31,7 @@ const Navigation = (props) => {
           </Navbar.Collapse>
         </Navbar>
       ) : (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg">
           <Navbar.Brand as={Link} to="/" className="mx-5">
             Tippin
           </Navbar.Brand>
