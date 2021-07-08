@@ -40,7 +40,12 @@ class App extends Component {
           />
           <Route
             path="/leavereview/:business"
-            element={<LeaveReviewComponent />}
+            element={
+              <LeaveReviewComponent
+                isLoggedIn={this.state.loggedIn}
+                updateAuth={this.updateAuth}
+              />
+            }
           />
           <Route
             path="/login"
