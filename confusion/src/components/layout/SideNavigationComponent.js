@@ -10,7 +10,7 @@ const SideNavigationComponent = (props) => {
     props.updateAuth();
   };
   return (
-    <div className="side-navigation bg-light">
+    <div className="side-navigation">
       <Navbar className="flex-column" expand="lg">
         <Navbar.Brand className="mx-5" as={Link} to="/">
           Tippin

@@ -44,7 +44,7 @@ class Waitlist extends Component {
   populateCustomers(customer) {
     return (
       <div
-        className="row border border-light p-3 m-2 rounded bg-light"
+        className="row border border-light p-3 m-2 rounded waitlist__customers"
         key={customer.id}
       >
         <div className="col">
