@@ -65,7 +65,7 @@ const AddGuestComponent = (props) => {
                     <label>Email address</label>
                     <Field className="form-control" type="text" name="email" />
                   </fieldset>
-                  <button className="btn btn-success" type="submit">
+                  <button className="btn btn-primary" type="submit">
                     Register
                   </button>
                 </Form>

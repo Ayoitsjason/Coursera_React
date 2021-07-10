@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-main {
+  background-color: hsl(225.35, 100%, 57.45%);
+}

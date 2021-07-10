@@ -59,7 +59,7 @@ class Waitlist extends Component {
           <p>Party Size: {customer.partySize}</p>
         </div>
         <div className="col">
-          <Button className="rounded-circle">&#10004;</Button>
+          <Button className="btn-main rounded-circle">&#10004;</Button>
         </div>
       </div>
     );
@@ -88,13 +88,13 @@ class Waitlist extends Component {
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
               <Button
-                className="mb-3 mx-1"
+                className="btn-main mb-3 mx-1"
                 onClick={() => this.addGuestsClick()}
               >
                 + Add Guest
               </Button>
               <Button
-                className="mb-3 mx-1"
+                className="btn-main mb-3 mx-1"
                 onClick={() => this.addLeaveReviewClick()}
               >
                 + Leave a Review
