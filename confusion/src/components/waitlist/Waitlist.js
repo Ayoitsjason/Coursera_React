@@ -79,7 +79,7 @@ class Waitlist extends Component {
     return (
       <div className="App">
         <Row className="m-0">
-          <Col xs={2}>
+          <Col xs={2} className="p-0">
             {this.state.isLoggedIn ? (
               <SideNavigationComponent updateAuth={this.props.updateAuth} />
             ) : null}

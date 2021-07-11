@@ -6,7 +6,7 @@ const LeaveReviewComponent = (props) => {
   return (
     <div className="App">
       <Row className="m-0">
-        <Col xs={2}>
+        <Col xs={2} className="p-0">
           {props.isLoggedIn ? (
             <SideNavigationComponent updateAuth={props.updateAuth} />
           ) : null}
