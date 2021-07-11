@@ -29,7 +29,7 @@ const SideNavigationComponent = (props) => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={onClickLogout}>Sign out</Nav.Link>
+              <Nav.Link onClick={onClickLogout}>Logout</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
