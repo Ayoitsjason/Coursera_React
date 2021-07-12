@@ -61,7 +61,15 @@ class App extends Component {
               />
             }
           />
-          <Route path="/reviews" element={<ReviewsComponent />} />
+          <Route
+            path="/reviews"
+            element={
+              <ReviewsComponent
+                isLoggedIn={this.state.loggedIn}
+                updateAuth={this.updateAuth}
+              />
+            }
+          />
           <Route path="*" element={<Nopage />} />
         </Routes>
       </BrowserRouter>
