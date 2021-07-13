@@ -88,16 +88,16 @@ class Waitlist extends Component {
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
               <Button
-                className="btn-main mb-3 mx-1"
+                className="btn-main mb-4 mx-2"
                 onClick={() => this.addGuestsClick()}
               >
                 + Add Guest
               </Button>
               <Button
-                className="btn-main mb-3 mx-1"
+                className="btn-main mb-4 mx-2"
                 onClick={() => this.addLeaveReviewClick()}
               >
-                + Leave a Review
+                + Leave Review
               </Button>
               {this.state.customers.map((customer) =>
                 this.populateCustomers(customer)
