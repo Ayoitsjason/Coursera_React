@@ -11,15 +11,18 @@ const SideNavigationComponent = (props) => {
   };
   return (
     <Navbar
-      className="justify-content-center side-navigation flex-column"
+      className="justify-content-start side-navigation flex-column"
       expand="lg"
     >
       <Navbar.Brand className="m-0" as={Link} to="/">
         Tippin
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle
+        className="justify-content-center"
+        aria-controls="basic-navbar-nav"
+      />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="flex-column" activeKey="/home">
+        <Nav className="flex-column align-self-start" activeKey="/home">
           <Nav.Item>
             <Nav.Link as={Link} to="/">
               Home
