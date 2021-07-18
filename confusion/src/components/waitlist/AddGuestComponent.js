@@ -4,7 +4,6 @@ import { Button, Col, Row } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 
 const AddGuestComponent = (props) => {
-  console.log(props);
   const onSubmit = (props) => {
     console.log(props);
   };
