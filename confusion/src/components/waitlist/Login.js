@@ -30,7 +30,7 @@ const Login = (props) => {
               <label>Password</label>
               <Field className="form-control" type="text" name="password" />
             </fieldset>
-            <button className="btn btn-success" type="submit">
+            <button className="btn btn-primary" type="submit">
               Login
             </button>
           </Form>
