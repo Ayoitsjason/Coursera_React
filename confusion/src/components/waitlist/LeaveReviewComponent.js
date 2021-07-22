@@ -13,6 +13,19 @@ const LeaveReviewComponent = (props) => {
         </Col>
         <Col xs={9}>
           <h1 className="my-5">Leave a Review!</h1>
+          <div className="container">
+            <div>
+              <Button>Extremely Satisfied</Button>
+              <Button>Satisfied</Button>
+              <Button>Neautral</Button>
+              <Button>dissatisfied</Button>
+              <Button>Extremely dissatisfied</Button>
+            </div>
+            <div>
+              <input />
+            </div>
+            <Button className="btn btn-primary">Submit</Button>
+          </div>
         </Col>
       </Row>
     </div>
