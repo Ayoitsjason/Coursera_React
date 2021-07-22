@@ -4,32 +4,37 @@
 
 /* Leave Review Component */
 .review__components-svg1 {
-  background-image: url("../images/very_satisfied_black_24dp.svg");
+  background-image: url("../images/satisfied_1.svg");
   background-size: cover;
+  color: hsl(31.21, 78.28%, 56.67%);
   width: 5rem;
   height: 5rem;
 }
 .review__components-svg2 {
-  background-image: url("../images/satisfied_black_24dp.svg");
+  background-image: url("../images/satisfied_2.svg");
   background-size: cover;
+  color: hsl(31.21, 78.28%, 56.67%);
   width: 5rem;
   height: 5rem;
 }
 .review__components-svg3 {
-  background-image: url("../images/neutral_black_24dp.svg");
+  background-image: url("../images/satisfied_3.svg");
   background-size: cover;
+  color: hsl(31.21, 78.28%, 56.67%);
   width: 5rem;
   height: 5rem;
 }
 .review__components-svg4 {
-  background-image: url("../images/dissatisfied_black_24dp.svg");
+  background-image: url("../images/satisfied_4.svg");
   background-size: cover;
+  color: hsl(31.21, 78.28%, 56.67%);
   width: 5rem;
   height: 5rem;
 }
 .review__components-svg5 {
-  background-image: url("../images/very_dissatisfied_alt_black_24dp.svg");
+  background-image: url("../images/satisfied_5.svg");
   background-size: cover;
+  color: hsl(31.21, 78.28%, 56.67%);
   width: 5rem;
   height: 5rem;
 }
