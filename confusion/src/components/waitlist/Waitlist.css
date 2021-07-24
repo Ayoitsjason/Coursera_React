@@ -3,38 +3,29 @@
 }
 
 /* Leave Review Component */
+.review__components {
+  border-style: none;
+  width: 5rem;
+  height: 5rem;
+}
+
 .review__components-svg1 {
   background-image: url("../images/satisfied_1.svg");
   background-size: cover;
-  color: hsl(31.21, 78.28%, 56.67%);
-  width: 5rem;
-  height: 5rem;
 }
 .review__components-svg2 {
   background-image: url("../images/satisfied_2.svg");
   background-size: cover;
-  color: hsl(31.21, 78.28%, 56.67%);
-  width: 5rem;
-  height: 5rem;
 }
 .review__components-svg3 {
   background-image: url("../images/satisfied_3.svg");
   background-size: cover;
-  color: hsl(31.21, 78.28%, 56.67%);
-  width: 5rem;
-  height: 5rem;
 }
 .review__components-svg4 {
   background-image: url("../images/satisfied_4.svg");
   background-size: cover;
-  color: hsl(31.21, 78.28%, 56.67%);
-  width: 5rem;
-  height: 5rem;
 }
 .review__components-svg5 {
   background-image: url("../images/satisfied_5.svg");
   background-size: cover;
-  color: hsl(31.21, 78.28%, 56.67%);
-  width: 5rem;
-  height: 5rem;
 }
