@@ -64,9 +64,9 @@ const AddGuestComponent = (props) => {
                     <label>Email address</label>
                     <Field className="form-control" type="text" name="email" />
                   </fieldset>
-                  <button className="btn btn-primary" type="submit">
+                  <Button className="btn btn-primary" type="submit">
                     Register
-                  </button>
+                  </Button>
                 </Form>
               )}
             </Formik>
