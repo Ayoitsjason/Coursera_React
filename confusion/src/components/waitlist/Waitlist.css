@@ -29,3 +29,19 @@
   background-image: url("../images/satisfied_5.svg");
   background-size: cover;
 }
+
+/* Party Size Component */
+.party-size__component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.party-size__component-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}

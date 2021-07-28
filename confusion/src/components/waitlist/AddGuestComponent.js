@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Button, Col, Row } from "react-bootstrap";
+import { Button, Col, Row, ButtonGroup, ToggleButton } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 
 const AddGuestComponent = (props) => {
+  const [radioValue, setRadioValue] = useState("1");
+
+  const radios = [
+    { name: "1", value: "1" },
+    { name: "2", value: "2" },
+    { name: "3", value: "3" },
+    { name: "4", value: "4" },
+    { name: "5", value: "5" },
+    { name: "6", value: "6" },
+    { name: "7+", value: "7" },
+  ];
+
   const onSubmit = (props) => {
     console.log(props);
   };
@@ -19,7 +31,26 @@ const AddGuestComponent = (props) => {
           <div className="container">
             <h1>Business</h1>
             <h2>Join Waitlist now!</h2>
+            <br />
             <h6>Select your party size:</h6>
+            <ButtonGroup>
+              {radios.map((radio, idx) => (
+                <ToggleButton
+                  key={idx}
+                  id={`radio-${idx}`}
+                  className={`party-size__component`}
+                  type="radio"
+                  name="radio"
+                  value={radio.value}
+                  checked={radioValue === radio.value}
+                  onChange={(e) => {
+                    setRadioValue(e.currentTarget.value);
+                  }}
+                >
+                  <p className="party-size__component-text">{radio.name}</p>
+                </ToggleButton>
+              ))}
+            </ButtonGroup>
             <h6>Your information</h6>
             <Formik
               initialValues={{
