@@ -35,11 +35,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: none;
+  border-style: none;
   width: 2rem;
   height: 2rem;
 }
 
 .party-size__component-text {
+  color: hsl(225.35, 100%, 57.45%);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -38,7 +38,7 @@ const AddGuestComponent = (props) => {
                 <ToggleButton
                   key={idx}
                   id={`radio-${idx}`}
-                  className={`party-size__component`}
+                  className={`party-size__component rounded-circle`}
                   type="radio"
                   name="radio"
                   value={radio.value}
