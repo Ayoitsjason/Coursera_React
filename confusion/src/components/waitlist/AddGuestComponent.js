@@ -96,7 +96,7 @@ const AddGuestComponent = (props) => {
                     <Field className="form-control" type="text" name="email" />
                   </fieldset>
                   <Button className="btn btn-primary" type="submit">
-                    Register
+                    Confirm
                   </Button>
                 </Form>
               )}
