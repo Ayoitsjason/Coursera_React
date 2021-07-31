@@ -77,14 +77,15 @@ class Waitlist extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container-xl">
         <Row className="m-0">
-          <Col xs={2} className="p-0">
-            {this.state.isLoggedIn ? (
+          {this.state.isLoggedIn ? (
+            <Col xs={2} className="p-0">
               <SideNavigationComponent updateAuth={this.props.updateAuth} />
-            ) : null}
-          </Col>
-          <Col xs={9}>
+            </Col>
+          ) : null}
+
+          <Col xs={this.state.isLoggedIn ? "9" : "12"}>
             <h1 className="my-5">Waitlist</h1>
             <div className="container px-3">
               <Button
