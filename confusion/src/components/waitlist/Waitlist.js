@@ -52,10 +52,10 @@ class Waitlist extends Component {
             {customer.firstName} {customer.lastName}
           </p>
         </div>
-        <div className="col-3">
+        <div className="col">
           <p>Number: {customer.number}</p>
         </div>
-        <div className="col-2">
+        <div className="col">
           <p>Party Size: {customer.partySize}</p>
         </div>
         <div className="col">
