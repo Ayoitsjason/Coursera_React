@@ -164,23 +164,13 @@ const SplashComponent = () => {
           {/* <!-- Get Started --> */}
           <section id="cta" className="main special">
             <header className="major">
-              <h2>Congue imperdiet</h2>
-              <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue
-                <br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
-              </p>
+              <h2>Get started today</h2>
             </header>
             <footer className="major">
               <ul className="actions special">
                 <li>
                   <a href="generic.html" className="button primary">
                     Get Started
-                  </a>
-                </li>
-                <li>
-                  <a href="generic.html" className="button">
-                    Learn More
                   </a>
                 </li>
               </ul>
@@ -191,23 +181,7 @@ const SplashComponent = () => {
         {/* <!-- Footer --> */}
         <footer id="footer">
           <section>
-            <h2>Aliquam sed mauris</h2>
-            <p>
-              Sed lorem ipsum dolor sit amet et nullam consequat feugiat
-              consequat magna adipiscing tempus etiam dolore veroeros. eget
-              dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula
-              erat egestas velit, vitae tincidunt odio.
-            </p>
-            <ul className="actions">
-              <li>
-                <a href="generic.html" className="button">
-                  Learn More
-                </a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Etiam feugiat</h2>
+            <h2>Contact Us</h2>
             <dl className="alt">
               <dt>Address</dt>
               <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
