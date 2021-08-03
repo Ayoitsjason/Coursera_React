@@ -53,10 +53,10 @@ class Waitlist extends Component {
           </p>
         </div>
         <div className="col">
-          <p>Number: {customer.number}</p>
+          <p>Party Size: {customer.partySize}</p>
         </div>
         <div className="col">
-          <p>Party Size: {customer.partySize}</p>
+          <p>Number: {customer.number}</p>
         </div>
         <div className="col">
           <Button className="btn-main rounded-circle">&#10004;</Button>
@@ -77,7 +77,7 @@ class Waitlist extends Component {
 
   render() {
     return (
-      <div className="App container-xl">
+      <div className="App">
         <Row className="m-0">
           {this.state.isLoggedIn ? (
             <Col xs={2} className="p-0">
@@ -86,23 +86,25 @@ class Waitlist extends Component {
           ) : null}
 
           <Col xs={this.state.isLoggedIn ? "9" : "12"}>
-            <h1 className="my-5">Waitlist</h1>
-            <div className="container px-3">
-              <Button
-                className="btn-main mb-4 mx-2"
-                onClick={() => this.addGuestsClick()}
-              >
-                + Add Guest
-              </Button>
-              <Button
-                className="btn-main mb-4 mx-2"
-                onClick={() => this.addLeaveReviewClick()}
-              >
-                + Leave Review
-              </Button>
-              {this.state.customers.map((customer) =>
-                this.populateCustomers(customer)
-              )}
+            <div className="container-xl">
+              <h1 className="my-5">Waitlist</h1>
+              <div className="container px-3">
+                <Button
+                  className="btn-main mb-4 mx-2"
+                  onClick={() => this.addGuestsClick()}
+                >
+                  + Add Guest
+                </Button>
+                <Button
+                  className="btn-main mb-4 mx-2"
+                  onClick={() => this.addLeaveReviewClick()}
+                >
+                  + Leave Review
+                </Button>
+                {this.state.customers.map((customer) =>
+                  this.populateCustomers(customer)
+                )}
+              </div>
             </div>
           </Col>
         </Row>
