@@ -11,6 +11,7 @@ import ReviewsComponent from "./components/waitlist/ReviewsComponent";
 import { Component } from "react";
 import { isUserLoggedIn } from "./components/authentication/AuthenticationService";
 import LeaveReviewComponent from "./components/waitlist/LeaveReviewComponent";
+import SplashComponent from "./components/splash/SplashComponent";
 
 class App extends Component {
   constructor() {
@@ -34,8 +35,9 @@ class App extends Component {
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />
         <Routes>
+          <Route path="/" element={<SplashComponent />} />
           <Route
-            path="/"
+            path="/home"
             element={<WaitlistWithNavigation updateAuth={this.updateAuth} />}
           />
           <Route
