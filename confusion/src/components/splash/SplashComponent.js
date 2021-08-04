@@ -11,7 +11,7 @@ const SplashComponent = () => {
           <span className="logo">
             <img src="images/logo.svg" alt="" />
           </span>
-          <h1>Waitlist</h1>
+          <h1>Tippin</h1>
           <p>Provide a waitlist for your customers today</p>
         </header>
 
@@ -24,10 +24,10 @@ const SplashComponent = () => {
               </a>
             </li>
             <li>
-              <a href="#first">First Section</a>
+              <a href="#first">Features</a>
             </li>
             <li>
-              <a href="#second">Second Section</a>
+              <a href="#second">Analytics</a>
             </li>
             <li>
               <a href="#cta">Get Started</a>
@@ -42,7 +42,7 @@ const SplashComponent = () => {
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Ipsum sed adipiscing</h2>
+                  <h2>What we provide</h2>
                 </header>
                 <p>
                   Sed lorem ipsum dolor sit amet nullam consequat feugiat
@@ -67,7 +67,7 @@ const SplashComponent = () => {
           {/* <!-- First Section --> */}
           <section id="first" className="main special">
             <header className="major">
-              <h2>Magna veroeros</h2>
+              <h2>Features</h2>
             </header>
             <ul className="features">
               <li>
@@ -109,7 +109,7 @@ const SplashComponent = () => {
           {/* <!-- Second Section --> */}
           <section id="second" className="main special">
             <header className="major">
-              <h2>Ipsum consequat</h2>
+              <h2>Analytics</h2>
               <p>
                 Donec imperdiet consequat consequat. Suspendisse feugiat congue
                 <br />
@@ -183,16 +183,16 @@ const SplashComponent = () => {
           <section>
             <h2>Contact Us</h2>
             <dl className="alt">
-              <dt>Address</dt>
+              {/* <dt>Address</dt>
               <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
               <dt>Phone</dt>
-              <dd>(000) 000-0000 x 0000</dd>
+              <dd>(000) 000-0000 x 0000</dd> */}
               <dt>Email</dt>
               <dd>
-                <a href="#">information@untitled.tld</a>
+                <a href="#">Tippinllc@gmail.com</a>
               </dd>
             </dl>
-            <ul className="icons">
+            {/* <ul className="icons">
               <li>
                 <a href="#" className="icon brands fa-twitter alt">
                   <span className="label">Twitter</span>
@@ -218,7 +218,7 @@ const SplashComponent = () => {
                   <span className="label">Dribbble</span>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </section>
           <p className="copyright">
             &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
