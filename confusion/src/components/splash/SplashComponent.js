@@ -50,17 +50,7 @@ const SplashComponent = () => {
                   ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem
                   ipsum dolor sit amet aliquam.
                 </p>
-                <ul className="actions">
-                  <li>
-                    <a href="generic.html" className="button">
-                      Learn More
-                    </a>
-                  </li>
-                </ul>
               </div>
-              <span className="image">
-                <img src="images/pic01.jpg" alt="" />
-              </span>
             </div>
           </section>
 
@@ -95,15 +85,7 @@ const SplashComponent = () => {
                 </p>
               </li>
             </ul>
-            <footer className="major">
-              <ul className="actions special">
-                <li>
-                  <a href="generic.html" className="button">
-                    Learn More
-                  </a>
-                </li>
-              </ul>
-            </footer>
+            <footer className="major"></footer>
           </section>
 
           {/* <!-- Second Section --> */}
