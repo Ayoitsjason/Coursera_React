@@ -132,15 +132,7 @@ const SplashComponent = () => {
               scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras
               eu ornare dui curabitur lacinia.
             </p>
-            <footer className="major">
-              <ul className="actions special">
-                <li>
-                  <a href="generic.html" className="button">
-                    Learn More
-                  </a>
-                </li>
-              </ul>
-            </footer>
+            <footer className="major"></footer>
           </section>
 
           {/* <!-- Get Started --> */}
