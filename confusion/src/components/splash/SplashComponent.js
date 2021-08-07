@@ -45,10 +45,10 @@ const SplashComponent = () => {
                   <h2>What we provide</h2>
                 </header>
                 <p>
-                  Sed lorem ipsum dolor sit amet nullam consequat feugiat
-                  consequat magna adipiscing magna etiam amet veroeros. Lorem
-                  ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem
-                  ipsum dolor sit amet aliquam.
+                  Here at Tippin, we provide a way to streamline your customer
+                  engagement. We provide a waiting list for your customers,
+                  after their service is complete, they will receive a brief
+                  survey to let the business know how they are doing.
                 </p>
               </div>
             </div>
