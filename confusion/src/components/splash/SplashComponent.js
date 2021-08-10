@@ -62,7 +62,7 @@ const SplashComponent = () => {
             <ul className="features">
               <li>
                 <span className="icon solid major style1 fa-code"></span>
-                <h3>Ipsum consequat</h3>
+                <h3>Waitlist</h3>
                 <p>
                   Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
                   consequat tempus veroeros sed consequat.
@@ -70,7 +70,7 @@ const SplashComponent = () => {
               </li>
               <li>
                 <span className="icon major style3 fa-copy"></span>
-                <h3>Amed sed feugiat</h3>
+                <h3>Review</h3>
                 <p>
                   Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
                   consequat tempus veroeros sed consequat.
@@ -78,7 +78,7 @@ const SplashComponent = () => {
               </li>
               <li>
                 <span className="icon major style5 fa-gem"></span>
-                <h3>Dolor nullam</h3>
+                <h3>Reminder</h3>
                 <p>
                   Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
                   consequat tempus veroeros sed consequat.
