@@ -27,7 +27,7 @@ const SplashComponent = () => {
               <a href="#first">Features</a>
             </li>
             <li>
-              <a href="#second">Analytics</a>
+              <a href="#second">Flow</a>
             </li>
             <li>
               <a href="#cta">Get Started</a>
@@ -91,7 +91,7 @@ const SplashComponent = () => {
           {/* <!-- Second Section --> */}
           <section id="second" className="main special">
             <header className="major">
-              <h2>Analytics</h2>
+              <h2>Flow</h2>
               <p>
                 Donec imperdiet consequat consequat. Suspendisse feugiat congue
                 <br />
