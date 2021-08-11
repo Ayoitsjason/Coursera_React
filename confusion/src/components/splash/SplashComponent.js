@@ -92,11 +92,6 @@ const SplashComponent = () => {
           <section id="second" className="main special">
             <header className="major">
               <h2>Flow</h2>
-              <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue
-                <br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
-              </p>
             </header>
             <ul className="statistics">
               <li className="style1">
