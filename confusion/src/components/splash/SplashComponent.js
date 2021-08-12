@@ -116,16 +116,12 @@ const SplashComponent = () => {
               </li>
             </ul>
             <p className="content">
-              Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl
-              eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum
-              ac arcu sit amet, fermentum pellentesque et purus. Integer maximus
-              varius lorem, sed convallis diam accumsan sed. Etiam porttitor
-              placerat sapien, sed eleifend a enim pulvinar faucibus semper quis
-              ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer
-              eget purus nec nulla mattis et accumsan ut magna libero. Morbi
-              auctor iaculis porttitor. Sed ut magna ac risus et hendrerit
-              scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras
-              eu ornare dui curabitur lacinia.
+              Having a waitlist for your business keeps more customers engaged.
+              They will be more willing to wait while they stay either stay in
+              store or be reminded if they decide to come back. Link your social
+              Apps to our application. Customers that love your business will be
+              navigated to your business review pages to leave 4 and 5 start
+              reviews to attract other customers.
             </p>
             <footer className="major"></footer>
           </section>
