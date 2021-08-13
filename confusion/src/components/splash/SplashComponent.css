@@ -2851,6 +2851,7 @@ table.alt tbody tr td {
 #header {
   padding: 5em 5em 1em 5em;
   text-align: center;
+  color: white;
 }
 
 #header h1 {
