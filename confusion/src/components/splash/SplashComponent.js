@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SplashComponent.css";
 
 const SplashComponent = () => {
@@ -134,9 +135,9 @@ const SplashComponent = () => {
             <footer className="major">
               <ul className="actions special">
                 <li>
-                  <a href="generic.html" className="button primary">
+                  <Link to="/signup" className="button primary">
                     Get Started
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </footer>
