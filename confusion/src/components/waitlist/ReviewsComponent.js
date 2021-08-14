@@ -6,12 +6,10 @@ const ReviewsComponent = (props) => {
   return (
     <div className="App">
       <Row className="m-0">
-        <Col xs={2} className="p-0">
-          {props.isLoggedIn ? (
-            <SideNavigationComponent updateAuth={props.updateAuth} />
-          ) : null}
-        </Col>
-        <Col xs={9}>
+        {props.isLoggedIn ? (
+          <SideNavigationComponent updateAuth={props.updateAuth} />
+        ) : null}
+        <Col xs={props.isLoggedIn ? "9" : "12"}>
           <h1 className="my-5">Reviews</h1>
         </Col>
       </Row>
