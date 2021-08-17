@@ -30,8 +30,8 @@ const AddGuestComponent = (props) => {
           <div className="container">
             <h2>Join Waitlist now!</h2>
             <br />
-            <h6>Select your party size:</h6>
-            <ButtonGroup>
+            <h3>Select your party size:</h3>
+            <ButtonGroup className="my-4">
               {radios.map((radio, idx) => (
                 <ToggleButton
                   key={idx}
@@ -49,7 +49,7 @@ const AddGuestComponent = (props) => {
                 </ToggleButton>
               ))}
             </ButtonGroup>
-            <h6>Your information</h6>
+            <h3 className="mb-4">Your information</h3>
             <Formik
               initialValues={{
                 firstName: "",
@@ -93,7 +93,7 @@ const AddGuestComponent = (props) => {
                     <label>Email address</label>
                     <Field className="form-control" type="text" name="email" />
                   </fieldset>
-                  <Button className="btn btn-primary" type="submit">
+                  <Button className="btn btn-primary my-2" type="submit">
                     Confirm
                   </Button>
                 </Form>
