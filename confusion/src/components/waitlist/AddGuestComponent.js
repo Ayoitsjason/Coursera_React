@@ -26,8 +26,8 @@ const AddGuestComponent = (props) => {
           <SideNavigationComponent updateAuth={props.updateAuth} />
         ) : null}
         <Col xs={props.isLoggedIn ? "9" : "12"}>
+          <h1 className="my-5">Business</h1>
           <div className="container">
-            <h1>Business</h1>
             <h2>Join Waitlist now!</h2>
             <br />
             <h6>Select your party size:</h6>
