@@ -34,7 +34,7 @@ const LeaveReviewComponent = (props) => {
           <h1 className="my-5">Leave a Review!</h1>
           <div className="container">
             <form>
-              <ButtonGroup>
+              <ButtonGroup className="my-4">
                 {radios.map((radio, idx) => (
                   <ToggleButton
                     key={idx}
