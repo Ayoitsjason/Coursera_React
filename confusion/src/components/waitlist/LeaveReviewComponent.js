@@ -56,7 +56,7 @@ const LeaveReviewComponent = (props) => {
                 <input />
               </div>
               <Button
-                className="btn btn-primary"
+                className="btn btn-primary my-2"
                 onClick={(e) => onClickSubmit(e)}
               >
                 Submit
