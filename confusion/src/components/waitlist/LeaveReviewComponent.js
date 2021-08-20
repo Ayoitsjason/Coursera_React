@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Col,
-  Row,
-  ToggleButton,
-  ButtonGroup,
-  Form,
-} from "react-bootstrap";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Button, Col, Row, ToggleButton, ButtonGroup } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 
 const LeaveReviewComponent = (props) => {
@@ -20,7 +14,7 @@ const LeaveReviewComponent = (props) => {
     { value: "5" },
   ];
 
-  const onClickSubmit = (e) => {
+  const onSubmit = (e) => {
     console.log(e);
   };
 
@@ -33,35 +27,55 @@ const LeaveReviewComponent = (props) => {
         <Col xs={props.isLoggedIn ? "9" : "12"}>
           <h1 className="my-5">Leave a Review!</h1>
           <div className="container">
-            <form>
-              <ButtonGroup className="my-4">
-                {radios.map((radio, idx) => (
-                  <ToggleButton
-                    key={idx}
-                    id={`radio-${idx}`}
-                    className={`review__components review__components-svg${radio.value} rounded-circle`}
-                    type="radio"
-                    variant={"light"}
-                    name="radio"
-                    value={radio.value}
-                    checked={radioValue === radio.value}
-                    onChange={(e) => {
-                      console.log(e);
-                      setRadioValue(e.currentTarget.value);
-                    }}
-                  ></ToggleButton>
-                ))}
-              </ButtonGroup>
-              <div>
-                <input />
-              </div>
-              <Button
-                className="btn btn-primary my-2"
-                onClick={(e) => onClickSubmit(e)}
-              >
-                Submit
-              </Button>
-            </form>
+            <Formik
+              initialValues={{
+                name: "",
+                comment: "",
+              }}
+              validateOnChange={false}
+              validateOnBlur={false}
+              onSubmit={onSubmit}
+              // validate={this.validate}
+              enableReinitialize={true}
+            >
+              {(props) => (
+                <Form>
+                  <ButtonGroup className="my-4">
+                    {radios.map((radio, idx) => (
+                      <ToggleButton
+                        key={idx}
+                        id={`radio-${idx}`}
+                        className={`review__components review__components-svg${radio.value} rounded-circle`}
+                        type="radio"
+                        variant={"light"}
+                        name="radio"
+                        value={radio.value}
+                        checked={radioValue === radio.value}
+                        onChange={(e) => {
+                          console.log(e);
+                          setRadioValue(e.currentTarget.value);
+                        }}
+                      ></ToggleButton>
+                    ))}
+                  </ButtonGroup>
+                  <fieldset className="form-group">
+                    <label>Name</label>
+                    <Field className="form-control" type="text" name="name" />
+                  </fieldset>
+                  <fieldset className="form-group">
+                    <label>Comment</label>
+                    <Field
+                      className="form-control"
+                      type="text"
+                      name="comment"
+                    />
+                  </fieldset>
+                  <Button className="btn btn-primary my-2" type="submit">
+                    Submit
+                  </Button>
+                </Form>
+              )}
+            </Formik>
           </div>
         </Col>
       </Row>
