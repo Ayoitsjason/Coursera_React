@@ -45,6 +45,10 @@ const Signup = () => {
               <label>Email</label>
               <Field className="form-control" type="text" name="email" />
             </fieldset>
+            <fieldset className="form-group">
+              <label>Business Name</label>
+              <Field className="form-control" type="text" name="email" />
+            </fieldset>
             <button className="btn btn-primary" type="submit">
               Register
             </button>
