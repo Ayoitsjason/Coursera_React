@@ -8,7 +8,7 @@ const Signup = () => {
 
   return (
     <div className="container">
-      <h1>Sign Up</h1>
+      <h1 className="">Sign Up</h1>
       <Formik
         initialValues={{
           firstName: "",
@@ -49,7 +49,7 @@ const Signup = () => {
               <label>Business Name</label>
               <Field className="form-control" type="text" name="email" />
             </fieldset>
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-primary my-2" type="submit">
               Register
             </button>
           </Form>
