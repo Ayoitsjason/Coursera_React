@@ -6,4 +6,6 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-http.createServer(app).listen(8000);
+app.use("/api/owner", ownersRoutes);
+
+app.listen(8000);
