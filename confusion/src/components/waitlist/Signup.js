@@ -8,7 +8,7 @@ const Signup = () => {
 
   return (
     <div className="container">
-      <h1 className="">Sign Up</h1>
+      <h1 className="my-5">Sign Up</h1>
       <Formik
         initialValues={{
           firstName: "",
