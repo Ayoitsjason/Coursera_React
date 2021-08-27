@@ -49,7 +49,7 @@ const Signup = () => {
               <label>Business Name</label>
               <Field className="form-control" type="text" name="email" />
             </fieldset>
-            <button className="btn btn-primary my-2" type="submit">
+            <button className="btn btn-primary" type="submit">
               Register
             </button>
           </Form>

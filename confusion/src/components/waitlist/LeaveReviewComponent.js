@@ -70,7 +70,7 @@ const LeaveReviewComponent = (props) => {
                       name="comment"
                     />
                   </fieldset>
-                  <Button className="btn btn-primary my-2" type="submit">
+                  <Button className="btn btn-primary" type="submit">
                     Submit
                   </Button>
                 </Form>

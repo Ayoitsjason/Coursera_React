@@ -11,7 +11,7 @@ const Login = (props) => {
 
   return (
     <div className="container">
-      <h1>Login</h1>
+      <h1 className="my-5">Login</h1>
       <Formik
         initialValues={{ username: "", password: "" }}
         validateOnChange={false}
