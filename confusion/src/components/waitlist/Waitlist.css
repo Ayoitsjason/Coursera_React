@@ -2,6 +2,15 @@
   background-color: hsl(242.07, 100%, 94.31%);
 }
 
+.waitlist__customers .col {
+  align-self: center;
+}
+
+.waitlist__customers p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
 /* Leave Review Component */
 .review__components {
   border-style: none;
