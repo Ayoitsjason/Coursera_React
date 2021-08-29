@@ -1,9 +1,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { RegisterOwner } from "../api/WaitlistDataService";
 
 const Signup = () => {
   const onSubmit = (props) => {
-    console.log(props);
+    RegisterOwner(props);
   };
 
   return (
@@ -13,9 +14,11 @@ const Signup = () => {
         initialValues={{
           firstName: "",
           lastName: "",
+          username: "",
           password: "",
           password2: "",
           email: "",
+          businessName: "",
         }}
         validateOnChange={false}
         validateOnBlur={false}
@@ -34,6 +37,10 @@ const Signup = () => {
               <Field className="form-control" type="text" name="lastName" />
             </fieldset>
             <fieldset className="form-group">
+              <label>Username</label>
+              <Field className="form-control" type="text" name="username" />
+            </fieldset>
+            <fieldset className="form-group">
               <label>Password</label>
               <Field className="form-control" type="text" name="password" />
             </fieldset>
@@ -47,7 +54,7 @@ const Signup = () => {
             </fieldset>
             <fieldset className="form-group">
               <label>Business Name</label>
-              <Field className="form-control" type="text" name="email" />
+              <Field className="form-control" type="text" name="businessName" />
             </fieldset>
             <button className="btn btn-primary" type="submit">
               Register
