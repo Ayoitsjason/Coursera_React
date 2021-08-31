@@ -11,7 +11,7 @@ export const RegisterOwner = async (props) => {
     businessName,
   } = props;
 
-  const body = props.json();
+  const body = JSON.stringify(props);
 
   const config = {
     header: {
@@ -20,7 +20,32 @@ export const RegisterOwner = async (props) => {
   };
 
   try {
-    await axios.post("http://localhost:8000", config, body);
+    await axios.post("http://localhost:8000/api/owner/register", config, body);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export const LoginOwner = async (props) => {
+  let body = JSON.stringify(props);
+  console.log("JSON:", body);
+  console.log(typeof body);
+  console.log(body.charAt(0));
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    let user = await axios.post(
+      "http://localhost:8000/api/owner/login",
+      config,
+      body
+    );
+
+    console.log(user);
   } catch (err) {
     console.error(err);
   }

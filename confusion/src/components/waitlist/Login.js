@@ -1,10 +1,14 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
+import { LoginOwner } from "../api/WaitlistDataService";
 
 const Login = (props) => {
   const onSubmit = (form) => {
     registerSuccessfulLogin(form.username);
+    console.log(form);
+    console.log(typeof form);
+    LoginOwner(form);
     props.updateAuth();
     props.navigate("/");
   };
