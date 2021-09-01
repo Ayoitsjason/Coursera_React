@@ -1,5 +1,5 @@
 const express = require("express");
-// const bodyPas
+const bodyParser = require("body-parser");
 const app = express();
 
 const ownersRoutes = require("./routes/ownersRoutes.js");
@@ -14,6 +14,8 @@ app.use((req, res, next) => {
 
   next();
 });
+
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("hello world");
