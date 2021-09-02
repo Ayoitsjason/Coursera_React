@@ -41,8 +41,8 @@ export const LoginOwner = async (props) => {
   try {
     let user = await axios.post(
       "http://localhost:8000/api/owner/login",
-      config,
-      body
+      body,
+      config
     );
 
     console.log(user);
