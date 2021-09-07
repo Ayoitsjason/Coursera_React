@@ -20,7 +20,7 @@ export const RegisterOwner = async (props) => {
   };
 
   try {
-    await axios.post("http://localhost:8000/api/owner/register", config, body);
+    await axios.post("http://localhost:8000/api/owner/register", body, config);
   } catch (err) {
     console.error(err);
   }
