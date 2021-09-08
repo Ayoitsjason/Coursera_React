@@ -16,7 +16,6 @@ const createOwner = async (req, res) => {
 };
 
 const loginOwner = async (req, res) => {
-  console.log(req.body);
   const { username, password } = req.body;
 
   let found = users.find(

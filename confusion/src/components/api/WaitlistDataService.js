@@ -28,9 +28,6 @@ export const RegisterOwner = async (props) => {
 
 export const LoginOwner = async (props) => {
   let body = JSON.stringify(props);
-  console.log("JSON:", body);
-  console.log(typeof body);
-  console.log(body.charAt(0));
 
   const config = {
     headers: {
@@ -44,8 +41,6 @@ export const LoginOwner = async (props) => {
       body,
       config
     );
-
-    console.log(user);
   } catch (err) {
     console.error(err);
   }

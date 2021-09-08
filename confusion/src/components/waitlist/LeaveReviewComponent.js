@@ -52,7 +52,6 @@ const LeaveReviewComponent = (props) => {
                         value={radio.value}
                         checked={radioValue === radio.value}
                         onChange={(e) => {
-                          console.log(e);
                           setRadioValue(e.currentTarget.value);
                         }}
                       ></ToggleButton>
