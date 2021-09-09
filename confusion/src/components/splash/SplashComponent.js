@@ -186,9 +186,6 @@ const SplashComponent = () => {
               </li>
             </ul> */}
           </section>
-          <p className="copyright">
-            &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-          </p>
         </footer>
       </div>
     </div>
