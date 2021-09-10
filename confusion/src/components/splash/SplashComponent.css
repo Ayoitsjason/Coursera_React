@@ -3,7 +3,7 @@
 
 /* Splash */
 #splash {
-  background-color: hsl(31.21, 78.28%, 56.67%);
+  background-color: hsl(242.07, 100%, 94.31%);
   margin-bottom: -4rem;
 }
 
@@ -2278,7 +2278,7 @@ ul.alt li {
 }
 
 dl dt {
-  color: #ffffff;
+  color: black;
 }
 
 /* Actions */
@@ -2851,7 +2851,7 @@ table.alt tbody tr td {
 #header {
   padding: 5em 5em 1em 5em;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 #header h1 {
@@ -3470,7 +3470,7 @@ body.is-preload #header.alt .logo {
   padding: 5em 5em 3em 5em;
   width: calc(100% + 2em);
   margin: 0 0 3em -2em;
-  color: white;
+  color: black;
 }
 
 #footer > * {
