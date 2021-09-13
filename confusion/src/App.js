@@ -35,11 +35,14 @@ class App extends Component {
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />
         <Routes>
-          <Route path="/" element={<SplashComponent />} />
-          <Route
-            path="/home"
-            element={<WaitlistWithNavigation updateAuth={this.updateAuth} />}
-          />
+          {!this.state.loggedIn ? (
+            <Route path="/" element={<SplashComponent />} />
+          ) : (
+            <Route
+              path="/"
+              element={<WaitlistWithNavigation updateAuth={this.updateAuth} />}
+            />
+          )}
           <Route
             path="/leavereview/:business"
             element={
