@@ -5,6 +5,33 @@ let users = [
   },
 ];
 
+let customers = [
+  {
+    id: "1",
+    firstName: "becky",
+    lastName: "ly",
+    number: "11111111111",
+    email: "example@yahoo.com",
+    partySize: "2",
+  },
+  {
+    id: "2",
+    firstName: "becky",
+    lastName: "ly",
+    number: "11111111111",
+    email: "example@yahoo.com",
+    partySize: "2",
+  },
+  {
+    id: "3",
+    firstName: "becky",
+    lastName: "ly",
+    number: "11111111111",
+    email: "example@yahoo.com",
+    partySize: "2",
+  },
+];
+
 const createOwner = async (req, res) => {
   const { username, password } = req.body;
   const user = {

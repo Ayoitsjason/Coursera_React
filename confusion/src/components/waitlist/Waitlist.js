@@ -8,32 +8,7 @@ class Waitlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: [
-        {
-          id: "1",
-          firstName: "becky",
-          lastName: "ly",
-          number: "11111111111",
-          email: "example@yahoo.com",
-          partySize: "2",
-        },
-        {
-          id: "2",
-          firstName: "becky",
-          lastName: "ly",
-          number: "11111111111",
-          email: "example@yahoo.com",
-          partySize: "2",
-        },
-        {
-          id: "3",
-          firstName: "becky",
-          lastName: "ly",
-          number: "11111111111",
-          email: "example@yahoo.com",
-          partySize: "2",
-        },
-      ],
+      customers: [],
       isLoggedIn: isUserLoggedIn(),
     };
     this.populateCustomers = this.populateCustomers.bind(this);
