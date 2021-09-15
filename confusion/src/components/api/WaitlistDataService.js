@@ -36,18 +36,25 @@ export const LoginOwner = async (props) => {
   }
 };
 
-// export const GetWaitlist = async (props) => {
-//   const { business } = props;
+export const GetWaitlist = async (business) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
 
-//   const config = {
-//     headers: {
-//       "Content-Type": "application/json",
-//     }
-//   }
+  const body = JSON.stringify({ business });
 
-//   try {
-//     const customers = await axios.get("http://")
-//   } catch(err) {
-//     console.error(err);
-//   }
-// }
+  try {
+    const res = await axios.get(
+      "http://localhost:8000/api/owner/waitlist",
+      body,
+      config
+    );
+    console.log(res);
+    console.log(res.data.customers);
+    return res.data.customers;
+  } catch (err) {
+    console.error(err);
+  }
+};

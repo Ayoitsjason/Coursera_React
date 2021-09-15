@@ -1,18 +1,40 @@
 import React, { Component } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { isUserLoggedIn } from "../authentication/AuthenticationService";
-import SideNavigationComponent from "../layout/SideNavigationComponent";
+import { isUserLoggedIn } from "../authentication/AuthenticationService.js";
+import SideNavigationComponent from "../layout/SideNavigationComponent.js";
+import { GetWaitlist } from "../api/WaitlistDataService.js";
 import "./Waitlist.css";
 
 class Waitlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      business: "",
       customers: [],
       isLoggedIn: isUserLoggedIn(),
     };
     this.populateCustomers = this.populateCustomers.bind(this);
     this.addGuestsClick = this.addGuestsClick.bind(this);
+    this.refreshCustomers = this.refreshCustomers.bind(this);
+    console.log("constructor");
+  }
+
+  componentDidMount() {
+    this.refreshCustomers();
+  }
+
+  refreshCustomers() {
+    GetWaitlist(this.state.business)
+      .then((res) => {
+        this.setState({ customers: res });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.customers);
   }
 
   // Populates Customers
@@ -51,6 +73,7 @@ class Waitlist extends Component {
   }
 
   render() {
+    console.log("render");
     return (
       <div className="App">
         <Row className="m-0">
@@ -74,9 +97,11 @@ class Waitlist extends Component {
                 >
                   + Leave Review
                 </Button>
-                {this.state.customers.map((customer) =>
-                  this.populateCustomers(customer)
-                )}
+                {this.state.customers.length > 0
+                  ? this.state.customers.map((customer) =>
+                      this.populateCustomers(customer)
+                    )
+                  : null}
               </div>
             </div>
           </Col>
