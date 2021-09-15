@@ -1,16 +1,6 @@
 import axios from "axios";
 
 export const RegisterOwner = async (props) => {
-  const {
-    firstName,
-    lastName,
-    username,
-    password,
-    password2,
-    email,
-    businessName,
-  } = props;
-
   const body = JSON.stringify(props);
 
   const config = {
@@ -27,7 +17,7 @@ export const RegisterOwner = async (props) => {
 };
 
 export const LoginOwner = async (props) => {
-  let body = JSON.stringify(props);
+  const body = JSON.stringify(props);
 
   const config = {
     headers: {
@@ -45,3 +35,19 @@ export const LoginOwner = async (props) => {
     console.error(err);
   }
 };
+
+// export const GetWaitlist = async (props) => {
+//   const { business } = props;
+
+//   const config = {
+//     headers: {
+//       "Content-Type": "application/json",
+//     }
+//   }
+
+//   try {
+//     const customers = await axios.get("http://")
+//   } catch(err) {
+//     console.error(err);
+//   }
+// }

@@ -55,5 +55,10 @@ const loginOwner = async (req, res) => {
   }
 };
 
+const getWaitlist = async (req, res) => {
+  res.status(201).json(customers);
+};
+
 exports.createOwner = createOwner;
 exports.loginOwner = loginOwner;
+exports.getWaitlist = getWaitlist;
