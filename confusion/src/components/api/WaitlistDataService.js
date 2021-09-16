@@ -51,8 +51,6 @@ export const GetWaitlist = async (business) => {
       body,
       config
     );
-    console.log(res);
-    console.log(res.data.customers);
     return res.data.customers;
   } catch (err) {
     console.error(err);

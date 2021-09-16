@@ -16,7 +16,6 @@ class Waitlist extends Component {
     this.populateCustomers = this.populateCustomers.bind(this);
     this.addGuestsClick = this.addGuestsClick.bind(this);
     this.refreshCustomers = this.refreshCustomers.bind(this);
-    console.log("constructor");
   }
 
   componentDidMount() {
@@ -31,10 +30,6 @@ class Waitlist extends Component {
       .catch((err) => {
         console.error(err);
       });
-  }
-
-  componentDidUpdate() {
-    console.log(this.state.customers);
   }
 
   // Populates Customers
@@ -73,7 +68,6 @@ class Waitlist extends Component {
   }
 
   render() {
-    console.log("render");
     return (
       <div className="App">
         <Row className="m-0">
