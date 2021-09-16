@@ -40,3 +40,11 @@
 .btn-main {
   background-color: hsl(225.35, 100%, 57.45%);
 }
+
+/* SVGs */
+.material-icons__trashcan {
+  background-image: url("./components/images/trashcan.svg");
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+}

@@ -51,7 +51,10 @@ class Waitlist extends Component {
           <p>Number: {customer.number}</p>
         </div>
         <div className="col">
-          <Button className="btn-main rounded-circle">&#10004;</Button>
+          <div className="action-container">
+            <Button className="btn-main rounded-circle m-1">&#10004;</Button>
+            <Button className="btn-danger material-icons__trashcan m-1"></Button>
+          </div>
         </div>
       </div>
     );

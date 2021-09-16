@@ -1,3 +1,4 @@
+/* Waitlist customer components */
 .waitlist__customers {
   background-color: hsl(242.07, 100%, 94.31%);
 }
@@ -9,6 +10,11 @@
 .waitlist__customers p {
   font-size: 1.3rem;
   margin: 0.5rem 0 0.5rem 0;
+}
+
+.action-container {
+  height: 100%;
+  align-self: center;
 }
 
 /* Leave Review Component */
