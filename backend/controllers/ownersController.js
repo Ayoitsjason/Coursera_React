@@ -51,7 +51,7 @@ const loginOwner = async (req, res) => {
     (u) => u.username === username && u.password === password
   );
   if (found) {
-    res.status(201).json({ username });
+    res.status(201).json({ user: username });
   } else {
     res.status(404).json("Invalid Credentials");
   }

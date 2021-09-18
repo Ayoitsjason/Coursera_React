@@ -26,11 +26,12 @@ export const LoginOwner = async (props) => {
   };
 
   try {
-    let user = await axios.post(
+    let res = await axios.post(
       "http://localhost:8000/api/owner/login",
       body,
       config
     );
+    return res.data.user;
   } catch (err) {
     console.error(err);
   }

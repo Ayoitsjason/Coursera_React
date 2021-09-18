@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
+import { Alert } from "react-bootstrap";
 import { LoginOwner } from "../api/WaitlistDataService";
+import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
 
-const Login = (props) => {
-  const onSubmit = (form) => {
-    registerSuccessfulLogin(form.username);
-    LoginOwner(form);
-    props.updateAuth();
-    props.navigate("/");
+const Login = ({ updateAuth, navigate }) => {
+  const [errorMessages, setErrorMessages] = useState("");
+
+  const onSubmit = async (values, resetForm) => {
+    const user = await LoginOwner(values);
+    if (user) {
+      registerSuccessfulLogin(user);
+      updateAuth();
+      navigate("/");
+    } else {
+      resetForm({ values: "" });
+      setErrorMessages("Invalid Credentials");
+    }
   };
 
   return (
@@ -18,7 +26,7 @@ const Login = (props) => {
         initialValues={{ username: "", password: "" }}
         validateOnChange={false}
         validateOnBlur={false}
-        onSubmit={onSubmit}
+        onSubmit={(values, { resetForm }) => onSubmit(values, resetForm)}
         // validate={this.validate}
         enableReinitialize={true}
       >

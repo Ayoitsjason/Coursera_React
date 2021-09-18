@@ -1,6 +1,6 @@
 export const USER_NAME_SESSION_ATTRIBUTE_NAME = "authenticatedUser";
 
-export const registerSuccessfulLogin = (username, password) => {
+export const registerSuccessfulLogin = (username) => {
   sessionStorage.setItem(USER_NAME_SESSION_ATTRIBUTE_NAME, username);
 };
 

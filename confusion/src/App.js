@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   updateAuth() {
+    console.log("updating");
     this.setState({
       loggedIn: isUserLoggedIn(),
     });
@@ -54,7 +55,12 @@ class App extends Component {
           />
           <Route
             path="/login"
-            element={<LoginWithNavigation updateAuth={this.updateAuth} />}
+            element={
+              <LoginWithNavigation
+                updateAuth={this.updateAuth}
+                isLoggedIn={this.state.loggedIn}
+              />
+            }
           />
           <Route path="/signup" element={<Signup />} />
           <Route
