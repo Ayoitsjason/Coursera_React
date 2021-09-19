@@ -22,6 +22,11 @@ const Login = ({ updateAuth, navigate }) => {
   return (
     <div className="container">
       <h1 className="my-5">Login</h1>
+      {errorMessages ? (
+        <Alert key="danger" variant="danger">
+          {errorMessages}
+        </Alert>
+      ) : null}
       <Formik
         initialValues={{ username: "", password: "" }}
         validateOnChange={false}
