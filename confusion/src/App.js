@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   updateAuth() {
-    console.log("updating");
     this.setState({
       loggedIn: isUserLoggedIn(),
     });
