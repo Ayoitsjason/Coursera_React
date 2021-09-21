@@ -155,7 +155,7 @@ const SplashComponent = () => {
               <dd>(000) 000-0000 x 0000</dd> */}
               <dt>Email</dt>
               <dd>
-                <a href="#">Tippinllc@gmail.com</a>
+                <a href="/#">Tippinllc@gmail.com</a>
               </dd>
             </dl>
             {/* <ul className="icons">

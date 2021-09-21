@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import { Alert } from "react-bootstrap";
 import { LoginOwner } from "../api/WaitlistDataService";
 import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
