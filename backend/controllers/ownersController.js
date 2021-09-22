@@ -34,6 +34,13 @@ let data = {
   ],
 };
 
+const addGuests = async (req, res) => {
+  const { id, firstName, lastName, number, email, partySize } = req.body;
+  const newCustomer = { id, firstName, lastName, number, email, partySize };
+  data.push(newCustomer);
+  res.status(201).json(newCustomer);
+};
+
 const createOwner = async (req, res) => {
   const { username, password } = req.body;
   const user = {
@@ -64,3 +71,4 @@ const getWaitlist = async (req, res) => {
 exports.createOwner = createOwner;
 exports.loginOwner = loginOwner;
 exports.getWaitlist = getWaitlist;
+exports.addGuests = addGuests;
