@@ -30,25 +30,6 @@ const AddGuestComponent = (props) => {
           <div className="container">
             <h2>Join Waitlist now!</h2>
             <br />
-            <h3>Select your party size:</h3>
-            <ButtonGroup className="my-4">
-              {radios.map((radio, idx) => (
-                <ToggleButton
-                  key={idx}
-                  id={`radio-${idx}`}
-                  className={`party-size__component rounded-circle`}
-                  type="radio"
-                  name="radio"
-                  value={radio.value}
-                  checked={radioValue === radio.value}
-                  onChange={(e) => {
-                    setRadioValue(e.currentTarget.value);
-                  }}
-                >
-                  <p className="party-size__component-text">{radio.name}</p>
-                </ToggleButton>
-              ))}
-            </ButtonGroup>
             <h3 className="mb-4">Your information</h3>
             <Formik
               initialValues={{
@@ -56,6 +37,7 @@ const AddGuestComponent = (props) => {
                 lastName: "",
                 mobileNumber: "",
                 email: "",
+                partySize: radioValue,
               }}
               validateOnChange={false}
               validateOnBlur={false}
@@ -65,6 +47,28 @@ const AddGuestComponent = (props) => {
             >
               {(props) => (
                 <Form>
+                  <h4>Select your party size:</h4>
+                  <ButtonGroup className="my-4">
+                    {radios.map((radio, idx) => (
+                      <ToggleButton
+                        key={idx}
+                        id={`radio-${idx}`}
+                        className={`party-size__component rounded-circle`}
+                        type="radio"
+                        name="radio"
+                        value={radio.value}
+                        checked={radioValue === radio.value}
+                        onChange={(e) => {
+                          setRadioValue(e.currentTarget.value);
+                        }}
+                      >
+                        <span className="party-size__component-text">
+                          {radio.name}
+                        </span>
+                      </ToggleButton>
+                    ))}
+                  </ButtonGroup>
+
                   <fieldset className="form-group">
                     <label>First Name</label>
                     <Field
