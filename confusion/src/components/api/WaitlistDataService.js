@@ -57,3 +57,24 @@ export const GetWaitlist = async (business) => {
     console.error(err);
   }
 };
+
+export const AddGuests = async (props) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const body = JSON.stringify(props);
+
+  try {
+    const res = await axios.post(
+      process.env.REACT_APP_BACKEND_URL,
+      body,
+      config
+    );
+    return res.data.customer;
+  } catch (err) {
+    console.error(err);
+  }
+};
