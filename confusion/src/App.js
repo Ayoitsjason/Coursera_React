@@ -31,6 +31,7 @@ class App extends Component {
   render() {
     const WaitlistWithNavigation = withNavigation(Waitlist);
     const LoginWithNavigation = withNavigation(Login);
+    const AddGuestComponentWithNavigation = withNavigation(AddGuestComponent);
     return (
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />
@@ -65,7 +66,7 @@ class App extends Component {
           <Route
             path="/addguest"
             element={
-              <AddGuestComponent
+              <AddGuestComponentWithNavigation
                 isLoggedIn={this.state.loggedIn}
                 updateAuth={this.updateAuth}
               />

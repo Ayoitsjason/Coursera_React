@@ -3,6 +3,7 @@ import { v1 as uuidv1 } from "uuid";
 import { Formik, Form, Field } from "formik";
 import { Button, Col, Row, ButtonGroup, ToggleButton } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
+import { AddGuests } from "../api/WaitlistDataService";
 
 const AddGuestComponent = (props) => {
   const [radioValue, setRadioValue] = useState("1");
@@ -17,8 +18,11 @@ const AddGuestComponent = (props) => {
     { name: "7+", value: "7" },
   ];
 
-  const onSubmit = (props) => {
-    console.log(props);
+  const onSubmit = async (props) => {
+    const customers = AddGuests(props);
+    // if (customers) {
+
+    // }
   };
   return (
     <div className="App">

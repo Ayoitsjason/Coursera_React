@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/register", ownersController.createOwner);
 router.post("/login", ownersController.loginOwner);
-router.post("/addguests", ownerController.addGuests);
+router.post("/addguests", ownersController.addGuests);
 router.get("/waitlist", ownersController.getWaitlist);
 
 module.exports = router;
