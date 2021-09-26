@@ -44,7 +44,7 @@ const addGuests = async (req, res) => {
     email,
     partySize,
   };
-  data.push(newCustomer);
+  data.customers.push(newCustomer);
   res.status(201).json(newCustomer);
 };
 

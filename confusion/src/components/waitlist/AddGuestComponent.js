@@ -5,7 +5,7 @@ import { Button, Col, Row, ButtonGroup, ToggleButton } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import { AddGuests } from "../api/WaitlistDataService";
 
-const AddGuestComponent = (props) => {
+const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
   const [radioValue, setRadioValue] = useState("1");
 
   const radios = [
@@ -18,19 +18,20 @@ const AddGuestComponent = (props) => {
     { name: "7+", value: "7" },
   ];
 
-  const onSubmit = async (props) => {
+  const onSubmit = (props) => {
     const customers = AddGuests(props);
-    // if (customers) {
-
-    // }
+    console.log(customers);
+    if (customers) {
+      navigate("/");
+    }
   };
   return (
     <div className="App">
       <Row className="m-0">
-        {props.isLoggedIn ? (
-          <SideNavigationComponent updateAuth={props.updateAuth} />
+        {isLoggedIn ? (
+          <SideNavigationComponent updateAuth={updateAuth} />
         ) : null}
-        <Col xs={props.isLoggedIn ? "9" : "12"}>
+        <Col xs={isLoggedIn ? "9" : "12"}>
           <h1 className="my-5">Business</h1>
           <div className="container">
             <h2>Join Waitlist now!</h2>
