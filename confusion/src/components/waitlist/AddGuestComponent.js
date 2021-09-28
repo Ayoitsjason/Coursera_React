@@ -18,8 +18,8 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
     { name: "7+", value: "7" },
   ];
 
-  const onSubmit = (props) => {
-    const customers = AddGuests(props);
+  const onSubmit = async (props) => {
+    const customers = await AddGuests(props);
     console.log(customers);
     if (customers) {
       navigate("/");
