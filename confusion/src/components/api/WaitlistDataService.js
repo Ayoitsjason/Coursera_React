@@ -69,7 +69,7 @@ export const AddGuests = async (props) => {
 
   try {
     const res = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/api/owne/addguests`,
+      `${process.env.REACT_APP_BACKEND_URL}/api/owner/addguests`,
       body,
       config
     );

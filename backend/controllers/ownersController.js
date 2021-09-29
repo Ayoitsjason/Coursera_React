@@ -45,7 +45,7 @@ const addGuests = async (req, res) => {
     partySize,
   };
   data.customers.push(newCustomer);
-  res.status(201).json(newCustomer);
+  res.status(201).json({ customer: newCustomer });
 };
 
 const createOwner = async (req, res) => {
