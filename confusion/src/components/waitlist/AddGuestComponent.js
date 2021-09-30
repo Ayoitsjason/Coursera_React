@@ -20,7 +20,6 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
 
   const onSubmit = async (props) => {
     const customers = await AddGuests(props);
-    console.log(customers);
     if (customers) {
       navigate("/");
     }
@@ -42,7 +41,7 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
                 id: uuidv1(),
                 firstName: "",
                 lastName: "",
-                mobileNumber: "",
+                number: "",
                 email: "",
                 partySize: radioValue,
               }}
@@ -94,11 +93,7 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Mobile number</label>
-                    <Field
-                      className="form-control"
-                      type="text"
-                      name="mobileNumber"
-                    />
+                    <Field className="form-control" type="text" name="number" />
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Email address</label>

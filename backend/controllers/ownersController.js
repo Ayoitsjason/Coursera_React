@@ -35,12 +35,12 @@ let data = {
 };
 
 const addGuests = async (req, res) => {
-  const { id, firstName, lastName, mobileNumber, email, partySize } = req.body;
+  const { id, firstName, lastName, number, email, partySize } = req.body;
   const newCustomer = {
     id,
     firstName,
     lastName,
-    mobileNumber,
+    number,
     email,
     partySize,
   };

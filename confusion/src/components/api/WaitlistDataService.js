@@ -73,7 +73,6 @@ export const AddGuests = async (props) => {
       body,
       config
     );
-    console.log(res);
     return res.data.customer;
   } catch (err) {
     console.error(err);
