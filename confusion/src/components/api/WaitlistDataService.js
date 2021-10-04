@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Auth
 export const RegisterOwner = async (props) => {
   const body = JSON.stringify(props);
 
@@ -37,6 +38,7 @@ export const LoginOwner = async (props) => {
   }
 };
 
+// Waitlist
 export const GetWaitlist = async (business) => {
   const config = {
     headers: {
@@ -70,6 +72,27 @@ export const AddGuests = async (props) => {
   try {
     const res = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/api/owner/addguests`,
+      body,
+      config
+    );
+    return res.data.customer;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export const DeleteGuests = async (props) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const body = JSON.stringify(props);
+
+  try {
+    const res = await axios.delete(
+      `${process.env.REACT_APP_BACKEND_URL}/api/owner/deleteguests`,
       body,
       config
     );

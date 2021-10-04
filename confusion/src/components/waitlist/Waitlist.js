@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { isUserLoggedIn } from "../authentication/AuthenticationService.js";
 import SideNavigationComponent from "../layout/SideNavigationComponent.js";
-import { GetWaitlist } from "../api/WaitlistDataService.js";
+import { GetWaitlist, DeleteGuests } from "../api/WaitlistDataService.js";
 import "./Waitlist.css";
 
 class Waitlist extends Component {
@@ -16,6 +16,7 @@ class Waitlist extends Component {
     this.populateCustomers = this.populateCustomers.bind(this);
     this.addGuestsClick = this.addGuestsClick.bind(this);
     this.refreshCustomers = this.refreshCustomers.bind(this);
+    this.onClickDelete = this.onClickDelete.bind(this);
   }
 
   componentDidMount() {
@@ -30,6 +31,13 @@ class Waitlist extends Component {
       .catch((err) => {
         console.error(err);
       });
+  }
+
+  // Delete a populated Customer
+  onClickDelete(e) {
+    console.log(e);
+    console.log(e.parentNode);
+    // DeleteGuests(e);
   }
 
   // Populates Customers
@@ -53,7 +61,10 @@ class Waitlist extends Component {
         <div className="col">
           <div className="action-container">
             <Button className="btn-main rounded-circle m-1">&#10004;</Button>
-            <Button className="btn-danger material-icons__trashcan m-1"></Button>
+            <Button
+              className="btn-danger material-icons__trashcan m-1"
+              onClick={(e) => this.onClickDelete(e)}
+            ></Button>
           </div>
         </div>
       </div>
