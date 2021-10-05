@@ -4,6 +4,7 @@ import { isUserLoggedIn } from "../authentication/AuthenticationService.js";
 import SideNavigationComponent from "../layout/SideNavigationComponent.js";
 import { GetWaitlist, DeleteGuests } from "../api/WaitlistDataService.js";
 import "./Waitlist.css";
+import GuestComponent from "./GuestComponent.js";
 
 class Waitlist extends Component {
   constructor(props) {
@@ -36,38 +37,17 @@ class Waitlist extends Component {
   // Delete a populated Customer
   onClickDelete(e) {
     console.log(e);
-    console.log(e.parentNode);
     // DeleteGuests(e);
   }
 
   // Populates Customers
   populateCustomers(customer) {
     return (
-      <div
-        className="row border border-light p-3 m-2 rounded waitlist__customers"
+      <GuestComponent
         key={customer.id}
-      >
-        <div className="col">
-          <p className="font-weight-bold text-capitalize">
-            {customer.firstName} {customer.lastName}
-          </p>
-        </div>
-        <div className="col">
-          <p>Party Size: {customer.partySize}</p>
-        </div>
-        <div className="col">
-          <p>Number: {customer.number}</p>
-        </div>
-        <div className="col">
-          <div className="action-container">
-            <Button className="btn-main rounded-circle m-1">&#10004;</Button>
-            <Button
-              className="btn-danger material-icons__trashcan m-1"
-              onClick={(e) => this.onClickDelete(e)}
-            ></Button>
-          </div>
-        </div>
-      </div>
+        customer={customer}
+        onClickDelete={this.onClickDelete}
+      />
     );
   }
 
