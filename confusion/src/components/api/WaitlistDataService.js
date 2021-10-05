@@ -81,14 +81,16 @@ export const AddGuests = async (props) => {
   }
 };
 
-export const DeleteGuests = async (props) => {
+export const DeleteGuests = async ({ business, guestsId }) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
 
-  const body = JSON.stringify(props);
+  const target = { business: business, guestsId: guestsId };
+
+  const body = JSON.stringify(target);
 
   try {
     const res = await axios.delete(
