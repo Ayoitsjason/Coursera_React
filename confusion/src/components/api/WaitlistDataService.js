@@ -81,7 +81,7 @@ export const AddGuests = async (props) => {
   }
 };
 
-export const DeleteGuests = async ({ business, guestsId }) => {
+export const DeleteGuests = async (business, guestsId) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
