@@ -5,6 +5,7 @@ const router = express.Router();
 router.post("/register", ownersController.createOwner);
 router.post("/login", ownersController.loginOwner);
 router.post("/addguests", ownersController.addGuests);
+router.delete("/deleteguests", ownersController.deleteGuests);
 router.get("/waitlist", ownersController.getWaitlist);
 
 module.exports = router;
