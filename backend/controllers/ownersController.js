@@ -96,3 +96,4 @@ exports.createOwner = createOwner;
 exports.loginOwner = loginOwner;
 exports.getWaitlist = getWaitlist;
 exports.addGuests = addGuests;
+exports.deleteGuests = deleteGuests;
