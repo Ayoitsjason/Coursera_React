@@ -48,6 +48,23 @@ const addGuests = async (req, res) => {
   res.status(201).json({ customer: newCustomer });
 };
 
+const deleteGuests = async (req, res) => {
+  const { business, guestsId } = req.body;
+  let deleteGuest = null;
+
+  data.customers.forEach((customer, index) => {
+    if (customer.id === guestsId) {
+      deleteGuest = data.customers.splice(index, 1);
+    }
+  });
+
+  if (deleteGuest) {
+    res.status(201).json(deleteGuest[0]);
+  } else {
+    res.status(404).json("Invalid input");
+  }
+};
+
 const createOwner = async (req, res) => {
   const { username, password } = req.body;
   const user = {
