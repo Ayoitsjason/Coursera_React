@@ -49,7 +49,11 @@ const addGuests = async (req, res) => {
 };
 
 const deleteGuests = async (req, res) => {
+  console.log(req);
+  console.log(req.body);
   const { business, guestsId } = req.body;
+  console.log(guestsId);
+  console.log(typeof guestsId);
   let deleteGuest = null;
 
   data.customers.forEach((customer, index) => {

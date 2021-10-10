@@ -88,9 +88,10 @@ export const DeleteGuests = async (business, guestsId) => {
     },
   };
 
-  const target = { business: business, guestsId: guestsId };
+  const target = { business, guestsId };
 
   const body = JSON.stringify(target);
+  console.log(body);
 
   try {
     const res = await axios.delete(

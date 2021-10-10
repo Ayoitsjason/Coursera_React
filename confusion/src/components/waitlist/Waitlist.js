@@ -36,6 +36,7 @@ class Waitlist extends Component {
 
   // Delete a populated Customer
   onClickDelete(guestsId) {
+    console.log(typeof guestsId);
     DeleteGuests(this.business, guestsId);
   }
 
