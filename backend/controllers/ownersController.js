@@ -49,11 +49,7 @@ const addGuests = async (req, res) => {
 };
 
 const deleteGuests = async (req, res) => {
-  console.log(req);
-  console.log(req.body);
   const { business, guestsId } = req.body;
-  console.log(guestsId);
-  console.log(typeof guestsId);
   let deleteGuest = null;
 
   data.customers.forEach((customer, index) => {
@@ -63,7 +59,7 @@ const deleteGuests = async (req, res) => {
   });
 
   if (deleteGuest) {
-    res.status(201).json(deleteGuest[0]);
+    res.status(201).json({ customer: deleteGuest[0]});
   } else {
     res.status(404).json("Invalid input");
   }

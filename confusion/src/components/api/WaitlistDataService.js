@@ -82,22 +82,15 @@ export const AddGuests = async (props) => {
 };
 
 export const DeleteGuests = async (business, guestsId) => {
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
 
   const target = { business, guestsId };
 
-  const body = JSON.stringify(target);
-  console.log(body);
+  const data = target;
 
   try {
     const res = await axios.delete(
       `${process.env.REACT_APP_BACKEND_URL}/api/owner/deleteguests`,
-      body,
-      config
+      data.json()
     );
     return res.data.customer;
   } catch (err) {
