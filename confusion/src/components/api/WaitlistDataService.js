@@ -90,7 +90,7 @@ export const DeleteGuests = async (business, guestsId) => {
   try {
     const res = await axios.delete(
       `${process.env.REACT_APP_BACKEND_URL}/api/owner/deleteguests`,
-      data.json()
+      {data}
     );
     return res.data.customer;
   } catch (err) {

@@ -17,7 +17,7 @@ let data = {
     },
     {
       id: "2",
-      firstName: "becky",
+      firstName: "amy",
       lastName: "ly",
       number: "11111111111",
       email: "example@yahoo.com",
@@ -25,7 +25,7 @@ let data = {
     },
     {
       id: "3",
-      firstName: "becky",
+      firstName: "tina",
       lastName: "ly",
       number: "11111111111",
       email: "example@yahoo.com",

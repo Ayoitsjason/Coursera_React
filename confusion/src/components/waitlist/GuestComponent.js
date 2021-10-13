@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 const GuestComponent = ({ customer, onClickDelete }) => {
   const onClick = () => {
-    onClickDelete(customer.id);
+    return onClickDelete(customer.id);
   };
 
   return (
