@@ -18,10 +18,11 @@
 }
 
 /* Leave Review Component */
-.review__components {
+.review__componentsSelected {
   border-style: none;
   width: 5rem;
   height: 5rem;
+  background-color: hsl(231.21,100%,77.25%);
 }
 
 .review__components-svg1 {

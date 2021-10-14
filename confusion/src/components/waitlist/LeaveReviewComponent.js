@@ -29,7 +29,9 @@ const LeaveReviewComponent = (props) => {
           <div className="container">
             <Formik
               initialValues={{
+                satisfaction: radioValue,
                 name: "",
+                technician: "",
                 comment: "",
               }}
               validateOnChange={false}
@@ -40,15 +42,16 @@ const LeaveReviewComponent = (props) => {
             >
               {(props) => (
                 <Form>
+                  <h4>How satisfied were you?</h4>
                   <ButtonGroup className="my-4">
                     {radios.map((radio, idx) => (
                       <ToggleButton
                         key={idx}
                         id={`radio-${idx}`}
-                        className={`review__components review__components-svg${radio.value} rounded-circle`}
+                        className={`review__componentsSelected review__components-svg${radio.value} rounded-circle`}
                         type="radio"
                         variant={"light"}
-                        name="radio"
+                        name="satisfaction"
                         value={radio.value}
                         checked={radioValue === radio.value}
                         onChange={(e) => {
@@ -58,8 +61,12 @@ const LeaveReviewComponent = (props) => {
                     ))}
                   </ButtonGroup>
                   <fieldset className="form-group">
-                    <label>Name</label>
+                    <label>Name (optional)</label>
                     <Field className="form-control" type="text" name="name" />
+                  </fieldset>
+                  <fieldset className="form-group">
+                    <label>Technician (optional)</label>
+                    <Field className="form-control" type="text" name="technician" />
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Comment</label>
