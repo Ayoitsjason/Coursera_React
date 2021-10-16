@@ -34,6 +34,24 @@ let data = {
   ],
 };
 
+let reviews = {
+  allReviews: [
+
+  ],
+};
+
+const leaveReview = async (req, res) => {
+  const { satisfaction, name, technician, comment } = req.body;
+  const review = {
+    satisfaction,
+    name,
+    technician,
+    comment
+  };
+  review.allReviews.push(review);
+  res.status(201).json(reviews);
+}
+
 const addGuests = async (req, res) => {
   const { id, firstName, lastName, number, email, partySize } = req.body;
   const newCustomer = {
@@ -97,3 +115,4 @@ exports.loginOwner = loginOwner;
 exports.getWaitlist = getWaitlist;
 exports.addGuests = addGuests;
 exports.deleteGuests = deleteGuests;
+exports.leaveReview = leaveReview;
