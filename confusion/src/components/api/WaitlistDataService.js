@@ -97,3 +97,27 @@ export const DeleteGuests = async (business, guestsId) => {
     console.error(err);
   }
 };
+
+export const LeaveReview = async ({satisfaction, name, technician, comment}) => {
+  const config = {
+    header: {
+      "Content-Type": "application/json"
+    },
+  };
+  
+  const review = {
+    satisfaction,
+    name,
+    technician,
+    comment
+  };
+
+  const body = JSON.stringify(review);
+
+  try {
+    const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/owner/leavereview`, body, config);
+    return res.data.review;
+  } catch(err) {
+    console.error(err);
+  }
+}

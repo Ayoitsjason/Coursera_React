@@ -49,7 +49,7 @@ const leaveReview = async (req, res) => {
     comment
   };
   review.allReviews.push(review);
-  res.status(201).json(reviews);
+  res.status(201).json(review);
 }
 
 const addGuests = async (req, res) => {
