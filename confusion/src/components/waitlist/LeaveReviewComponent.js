@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { Button, Col, Row, ToggleButton, ButtonGroup } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
+import { LeaveReview } from "../api/WaitlistDataService";
 
 const LeaveReviewComponent = (props) => {
   const [radioValue, setRadioValue] = useState("1");
@@ -14,8 +15,12 @@ const LeaveReviewComponent = (props) => {
     { value: "5" },
   ];
 
-  const onSubmit = (e) => {
-    console.log(e);
+  const onSubmit = (form) => {
+    console.log(form);
+    const review = LeaveReview(form);
+    if (review) {
+      props.navigate("/");
+    }
   };
 
   return (

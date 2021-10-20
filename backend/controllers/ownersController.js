@@ -41,15 +41,18 @@ let reviews = {
 };
 
 const leaveReview = async (req, res) => {
+  console.log("req: ", req);
+  console.log("req body: ", req.body);
   const { satisfaction, name, technician, comment } = req.body;
-  const review = {
+  const newReview = {
     satisfaction,
     name,
     technician,
     comment
   };
-  review.allReviews.push(review);
-  res.status(201).json(review);
+  console.log(newReview);
+  reviews.allReviews.push(newReview);
+  res.status(201).json({review: newReview});
 }
 
 const addGuests = async (req, res) => {

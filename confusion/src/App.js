@@ -32,6 +32,7 @@ class App extends Component {
     const WaitlistWithNavigation = withNavigation(Waitlist);
     const LoginWithNavigation = withNavigation(Login);
     const AddGuestComponentWithNavigation = withNavigation(AddGuestComponent);
+    const LeaveReviewComponentWithNavigation = withNavigation(LeaveReviewComponent);
     return (
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />
@@ -47,7 +48,7 @@ class App extends Component {
           <Route
             path="/leavereview/:business"
             element={
-              <LeaveReviewComponent
+              <LeaveReviewComponentWithNavigation
                 isLoggedIn={this.state.loggedIn}
                 updateAuth={this.updateAuth}
               />
