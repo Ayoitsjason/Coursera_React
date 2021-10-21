@@ -16,7 +16,6 @@ const LeaveReviewComponent = (props) => {
   ];
 
   const onSubmit = (form) => {
-    console.log(form);
     const review = LeaveReview(form);
     if (review) {
       props.navigate("/");

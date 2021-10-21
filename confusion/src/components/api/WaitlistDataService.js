@@ -112,14 +112,10 @@ export const LeaveReview = async ({satisfaction, name, technician, comment}) => 
     comment
   };
 
-  console.log("review: ", review);
   const body = JSON.stringify(review);
-  console.log("body: ", body);
 
   try {
     const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/owner/leavereview`, body, config);
-    console.log(res);
-    console.log(res.data);
     return res.data.review;
   } catch(err) {
     console.error(err);
