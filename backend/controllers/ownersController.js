@@ -41,8 +41,6 @@ let reviews = {
 };
 
 const leaveReview = async (req, res) => {
-  console.log("req: ", req);
-  console.log("req body: ", req.body);
   const { satisfaction, name, technician, comment } = req.body;
   const newReview = {
     satisfaction,
@@ -50,7 +48,6 @@ const leaveReview = async (req, res) => {
     technician,
     comment
   };
-  console.log(newReview);
   reviews.allReviews.push(newReview);
   res.status(201).json({review: newReview});
 }
