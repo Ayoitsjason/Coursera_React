@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
+import ReviewComponent from "./ReviewComponent";
 
 const ReviewsComponent = (props) => {
   const [reviews, setReviews] = useState([]);
@@ -9,7 +10,7 @@ const ReviewsComponent = (props) => {
   })
 
   const populateReviews = (review) => {
-    return (<div>review</div>);
+    return (<ReviewComponent/>);
   };
 
   return (
