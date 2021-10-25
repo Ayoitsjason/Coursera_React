@@ -8,5 +8,6 @@ router.post("/addguests", ownersController.addGuests);
 router.delete("/deleteguests", ownersController.deleteGuests);
 router.get("/waitlist", ownersController.getWaitlist);
 router.post("/leavereview", ownersController.leaveReview);
+router.get("/reviews", ownersController.getReviews);
 
 module.exports = router;
