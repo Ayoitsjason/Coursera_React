@@ -34,23 +34,28 @@ let data = {
   ],
 };
 
-let reviews = {
-  allReviews: [
+const reviews = [];
 
-  ],
+const getAllReviews = async (req, res) => {
+  const { business } = req.body;
+  const allReviewsByBusiness = reviews.filter((review) => {
+    review.business === business;
+  });
+  res.status(201).json({ allReviews: allReviewsByBusiness });
 };
 
 const leaveReview = async (req, res) => {
-  const { satisfaction, name, technician, comment } = req.body;
+  const { business, satisfaction, name, technician, comment } = req.body;
   const newReview = {
+    business,
     satisfaction,
     name,
     technician,
-    comment
+    comment,
   };
-  reviews.allReviews.push(newReview);
-  res.status(201).json({review: newReview});
-}
+  reviews.push(newReview);
+  res.status(201).json({ review: newReview });
+};
 
 const addGuests = async (req, res) => {
   const { id, firstName, lastName, number, email, partySize } = req.body;
@@ -77,7 +82,7 @@ const deleteGuests = async (req, res) => {
   });
 
   if (deleteGuest) {
-    res.status(201).json({ customer: deleteGuest[0]});
+    res.status(201).json({ customer: deleteGuest[0] });
   } else {
     res.status(404).json("Invalid input");
   }
@@ -116,3 +121,4 @@ exports.getWaitlist = getWaitlist;
 exports.addGuests = addGuests;
 exports.deleteGuests = deleteGuests;
 exports.leaveReview = leaveReview;
+exports.getAllReviews = getAllReviews;
