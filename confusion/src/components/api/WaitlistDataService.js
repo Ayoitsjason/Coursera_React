@@ -82,7 +82,6 @@ export const AddGuests = async (props) => {
 };
 
 export const DeleteGuests = async (business, guestsId) => {
-
   const target = { business, guestsId };
 
   const data = target;
@@ -90,7 +89,7 @@ export const DeleteGuests = async (business, guestsId) => {
   try {
     const res = await axios.delete(
       `${process.env.REACT_APP_BACKEND_URL}/api/owner/deleteguests`,
-      {data}
+      { data }
     );
     return res.data.customer;
   } catch (err) {
@@ -98,26 +97,56 @@ export const DeleteGuests = async (business, guestsId) => {
   }
 };
 
-export const LeaveReview = async ({satisfaction, name, technician, comment}) => {
+export const LeaveReview = async ({
+  satisfaction,
+  name,
+  technician,
+  comment,
+}) => {
   const config = {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
   };
-  
+
   const review = {
     satisfaction,
     name,
     technician,
-    comment
+    comment,
   };
 
   const body = JSON.stringify(review);
 
   try {
-    const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/owner/leavereview`, body, config);
+    const res = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/owner/leavereview`,
+      body,
+      config
+    );
     return res.data.review;
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
-}
+};
+
+export const getAllReviews = async ({ business }) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  const body = JSON.stringify({ business });
+
+  try {
+    const res = await axios.get(
+      `${process.env.REACT_APP_BACKEND_URL}/api/owner/reviews`,
+      body,
+      config
+    );
+    return res.data.allReviews;
+  } catch (err) {
+    console.error(err);
+  }
+};
