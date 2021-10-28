@@ -32,7 +32,8 @@ class App extends Component {
     const WaitlistWithNavigation = withNavigation(Waitlist);
     const LoginWithNavigation = withNavigation(Login);
     const AddGuestComponentWithNavigation = withNavigation(AddGuestComponent);
-    const LeaveReviewComponentWithNavigation = withNavigation(LeaveReviewComponent);
+    const LeaveReviewComponentWithNavigation =
+      withNavigation(LeaveReviewComponent);
     return (
       <BrowserRouter>
         <Navigation loggedIn={this.state.loggedIn} />

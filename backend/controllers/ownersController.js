@@ -2,6 +2,7 @@ let users = [
   {
     username: "user",
     password: "password",
+    business: "royal",
   },
 ];
 
