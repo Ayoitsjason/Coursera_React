@@ -7,11 +7,20 @@ export const registerSuccessfulLogin = (username, business) => {
 };
 
 export const isUserLoggedIn = () => {
-  let user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
+  const user = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
   if (user === null) {
     return false;
   }
   return true;
+};
+export const isUserLoggedInBusiness = () => {
+  const business = sessionStorage.getItem(
+    CURRENT_BUSINESS_SESSION_ATTRIBUTE_BUSINESS
+  );
+  if (business === null) {
+    return "";
+  }
+  return business;
 };
 
 export const logout = () => {
