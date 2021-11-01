@@ -9,7 +9,10 @@ import Nopage from "./components/Nopage";
 import AddGuestComponent from "./components/waitlist/AddGuestComponent";
 import ReviewsComponent from "./components/waitlist/ReviewsComponent";
 import { Component } from "react";
-import { isUserLoggedIn } from "./components/authentication/AuthenticationService";
+import {
+  isUserLoggedIn,
+  isUserLoggedInBusiness,
+} from "./components/authentication/AuthenticationService";
 import LeaveReviewComponent from "./components/waitlist/LeaveReviewComponent";
 import SplashComponent from "./components/splash/SplashComponent";
 
@@ -18,6 +21,7 @@ class App extends Component {
     super();
     this.state = {
       loggedIn: isUserLoggedIn(),
+      currentBusiness: isUserLoggedInBusiness(),
     };
     this.updateAuth = this.updateAuth.bind(this);
   }
