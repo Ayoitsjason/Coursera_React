@@ -29,6 +29,7 @@ class App extends Component {
   updateAuth() {
     this.setState({
       loggedIn: isUserLoggedIn(),
+      currentBusiness: isUserLoggedInBusiness(),
     });
   }
 
@@ -84,6 +85,7 @@ class App extends Component {
               <ReviewsComponent
                 isLoggedIn={this.state.loggedIn}
                 updateAuth={this.updateAuth}
+                currentBusiness={this.currentBusiness}
               />
             }
           />

@@ -130,14 +130,14 @@ export const LeaveReview = async ({
   }
 };
 
-export const getAllReviews = async ({ business }) => {
+export const getAllReviews = async (business) => {
   const config = {
     headers: {
       "Content-Type": "application/json",
     },
   };
 
-  const body = JSON.stringify({ business });
+  const body = JSON.stringify({ business: business });
 
   try {
     const res = await axios.get(

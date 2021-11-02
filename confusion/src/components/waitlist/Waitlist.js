@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { isUserLoggedIn } from "../authentication/AuthenticationService.js";
+import {
+  isUserLoggedIn,
+  isUserLoggedInBusiness,
+} from "../authentication/AuthenticationService.js";
 import SideNavigationComponent from "../layout/SideNavigationComponent.js";
 import { GetWaitlist, DeleteGuests } from "../api/WaitlistDataService.js";
 import "./Waitlist.css";
@@ -10,7 +13,7 @@ class Waitlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      business: "",
+      business: isUserLoggedInBusiness(),
       customers: [],
       isLoggedIn: isUserLoggedIn(),
     };
@@ -36,12 +39,13 @@ class Waitlist extends Component {
 
   // Delete a populated Customer
   onClickDelete(guestsId) {
-    DeleteGuests(this.business, guestsId).then((customer) => {
+    DeleteGuests(this.business, guestsId)
+      .then((customer) => {
         this.refreshCustomers();
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   // Populates Customers

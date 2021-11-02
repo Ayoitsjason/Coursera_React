@@ -4,23 +4,23 @@ import { getAllReviews } from "../api/WaitlistDataService";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import ReviewComponent from "./ReviewComponent";
 
-const ReviewsComponent = (props) => {
+const ReviewsComponent = ({ isLoggedIn, updateAuth, currentBusiness }) => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    // setReviews(getAllReviews());
-  }, []);
+    setReviews(getAllReviews(currentBusiness));
+  }, [currentBusiness]);
 
   const populateReviews = (review) => {
-    return <ReviewComponent />;
+    return <ReviewComponent review={review} />;
   };
 
   return (
     <div className="App">
       <Row className="m-0">
-        {props.isLoggedIn ? (
-          <SideNavigationComponent updateAuth={props.updateAuth} />
+        {isLoggedIn ? (
+          <SideNavigationComponent updateAuth={updateAuth} />
         ) : null}
-        <Col xs={props.isLoggedIn ? "9" : "12"}>
+        <Col xs={isLoggedIn ? "9" : "12"}>
           <h1 className="my-5">Reviews</h1>
           {reviews.length > 0
             ? reviews.map((review) => populateReviews(review))
