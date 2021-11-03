@@ -2,7 +2,7 @@ let users = [
   {
     username: "user",
     password: "password",
-    business: "royal",
+    business: "royals",
   },
 ];
 
@@ -40,7 +40,7 @@ const reviews = [];
 const getAllReviews = async (req, res) => {
   const { business } = req.body;
   const allReviewsByBusiness = reviews.filter((review) => {
-    review.business === business;
+    review.business !== business;
   });
   res.status(201).json({ allReviews: allReviewsByBusiness });
 };
@@ -106,7 +106,7 @@ const loginOwner = async (req, res) => {
     (u) => u.username === username && u.password === password
   );
   if (found) {
-    res.status(201).json({ user: username });
+    res.status(201).json({ user: username, business: users.business });
   } else {
     res.status(404).json("Invalid Credentials");
   }
