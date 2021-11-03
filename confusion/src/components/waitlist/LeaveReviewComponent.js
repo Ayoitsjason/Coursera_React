@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { Button, Col, Row, ToggleButton, ButtonGroup } from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import { LeaveReview } from "../api/WaitlistDataService";
+import { useParams } from "react-router-dom";
 
 const LeaveReviewComponent = (props) => {
   const [radioValue, setRadioValue] = useState("1");
+  const [business, setBusiness] = useState("");
+  const params = useParams();
+
+  useEffect(() => {
+    setBusiness(params.business);
+  }, [params.business]);
 
   const radios = [
     { value: "1" },
@@ -33,6 +40,7 @@ const LeaveReviewComponent = (props) => {
           <div className="container">
             <Formik
               initialValues={{
+                business: business,
                 satisfaction: radioValue,
                 name: "",
                 technician: "",
@@ -70,7 +78,11 @@ const LeaveReviewComponent = (props) => {
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Technician (optional)</label>
-                    <Field className="form-control" type="text" name="technician" />
+                    <Field
+                      className="form-control"
+                      type="text"
+                      name="technician"
+                    />
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Comment</label>

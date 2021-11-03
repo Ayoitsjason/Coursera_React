@@ -98,6 +98,7 @@ export const DeleteGuests = async (business, guestsId) => {
 };
 
 export const LeaveReview = async ({
+  business,
   satisfaction,
   name,
   technician,
@@ -110,6 +111,7 @@ export const LeaveReview = async ({
   };
 
   const review = {
+    business: business.slice(1, business.length),
     satisfaction,
     name,
     technician,
