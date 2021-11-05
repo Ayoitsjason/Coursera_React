@@ -105,8 +105,9 @@ const loginOwner = async (req, res) => {
   let found = users.find(
     (u) => u.username === username && u.password === password
   );
+
   if (found) {
-    res.status(201).json({ user: username, business: users.business });
+    res.status(201).json({ user: found.username, business: found.business });
   } else {
     res.status(404).json("Invalid Credentials");
   }

@@ -8,9 +8,9 @@ const Login = ({ updateAuth, navigate }) => {
   const [errorMessages, setErrorMessages] = useState("");
 
   const onSubmit = async (values, resetForm) => {
-    const user = await LoginOwner(values);
+    const { user, business } = await LoginOwner(values);
     if (user) {
-      registerSuccessfulLogin(user);
+      registerSuccessfulLogin(user, business);
       updateAuth();
       navigate("/");
     } else {
