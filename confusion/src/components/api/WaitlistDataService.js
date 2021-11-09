@@ -32,7 +32,6 @@ export const LoginOwner = async (props) => {
       body,
       config
     );
-    console.log(res);
     return res.data;
   } catch (err) {
     console.error(err);
