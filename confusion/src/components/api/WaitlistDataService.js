@@ -133,20 +133,18 @@ export const LeaveReview = async ({
 };
 
 export const getAllReviews = async (business) => {
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
+  const body = {
+    params: {
+      business: business,
     },
   };
-
-  const body = JSON.stringify({ business: business });
 
   try {
     const res = await axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/owner/reviews`,
-      body,
-      config
+      body
     );
+
     return res.data.allReviews;
   } catch (err) {
     console.error(err);

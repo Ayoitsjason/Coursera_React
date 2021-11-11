@@ -8,8 +8,9 @@ const Login = ({ updateAuth, navigate }) => {
   const [errorMessages, setErrorMessages] = useState("");
 
   const onSubmit = async (values, resetForm) => {
-    const { user, business } = await LoginOwner(values);
-    if (user) {
+    const data = await LoginOwner(values);
+    if (data) {
+      const { user, business } = data;
       registerSuccessfulLogin(user, business);
       updateAuth();
       navigate("/");

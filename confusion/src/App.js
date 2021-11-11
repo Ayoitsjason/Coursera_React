@@ -85,7 +85,7 @@ class App extends Component {
               <ReviewsComponent
                 isLoggedIn={this.state.loggedIn}
                 updateAuth={this.updateAuth}
-                currentBusiness={this.currentBusiness}
+                currentBusiness={this.state.currentBusiness}
               />
             }
           />

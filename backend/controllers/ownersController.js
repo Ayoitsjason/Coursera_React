@@ -38,10 +38,10 @@ let data = {
 const reviews = [];
 
 const getAllReviews = async (req, res) => {
-  const { business } = req.body;
-  const allReviewsByBusiness = reviews.filter((review) => {
-    review.business !== business;
-  });
+  const { business } = req.query;
+  const allReviewsByBusiness = reviews.filter(
+    (review) => review.business === business
+  );
   res.status(201).json({ allReviews: allReviewsByBusiness });
 };
 
