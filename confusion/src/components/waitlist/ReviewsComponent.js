@@ -3,15 +3,19 @@ import { Col, Row } from "react-bootstrap";
 import { getAllReviews } from "../api/WaitlistDataService";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import ReviewComponent from "./ReviewComponent";
+import { v1 as uuidv1 } from "uuid";
 
 const ReviewsComponent = ({ isLoggedIn, updateAuth, currentBusiness }) => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    setReviews(getAllReviews(currentBusiness));
+    (async function () {
+      let allReviews = await getAllReviews(currentBusiness);
+      setReviews(allReviews);
+    })();
   }, [currentBusiness]);
 
   const populateReviews = (review) => {
-    return <ReviewComponent review={review} />;
+    return <ReviewComponent key={uuidv1()} review={review} />;
   };
 
   return (
