@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Formik, Form, Field } from "formik";
+import { useParams } from "react-router-dom";
 import { Button, Col, Row, ToggleButton, ButtonGroup } from "react-bootstrap";
+import { Formik, Form, Field } from "formik";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import { LeaveReview } from "../api/WaitlistDataService";
-import { useParams } from "react-router-dom";
+import { v1 as uuidv1 } from "uuid";
 
 const LeaveReviewComponent = (props) => {
   const [radioValue, setRadioValue] = useState("1");
@@ -40,6 +41,7 @@ const LeaveReviewComponent = (props) => {
           <div className="container">
             <Formik
               initialValues={{
+                id: uuidv1(),
                 business: business,
                 satisfaction: radioValue,
                 name: "",

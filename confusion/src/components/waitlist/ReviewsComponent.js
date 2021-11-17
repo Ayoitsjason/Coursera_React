@@ -3,7 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import { getAllReviews } from "../api/WaitlistDataService";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import ReviewComponent from "./ReviewComponent";
-import { v1 as uuidv1 } from "uuid";
 
 const ReviewsComponent = ({ isLoggedIn, updateAuth, currentBusiness }) => {
   const [reviews, setReviews] = useState([]);
@@ -15,7 +14,7 @@ const ReviewsComponent = ({ isLoggedIn, updateAuth, currentBusiness }) => {
   }, [currentBusiness]);
 
   const populateReviews = (review) => {
-    return <ReviewComponent key={uuidv1()} review={review} />;
+    return <ReviewComponent key={review.id} review={review} />;
   };
 
   return (

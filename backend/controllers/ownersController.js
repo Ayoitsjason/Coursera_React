@@ -46,8 +46,9 @@ const getAllReviews = async (req, res) => {
 };
 
 const leaveReview = async (req, res) => {
-  const { business, satisfaction, name, technician, comment } = req.body;
+  const { id, business, satisfaction, name, technician, comment } = req.body;
   const newReview = {
+    id,
     business,
     satisfaction,
     name,
