@@ -22,14 +22,14 @@
   border-style: none;
   width: 5rem;
   height: 5rem;
-  background-color: hsl(231.21,100%,77.25%);
+  background-color: hsl(231.21, 100%, 77.25%);
 }
 
-.review__components-svg1 {
+.review__components-svg5 {
   background-image: url("../images/satisfied_1.svg");
   background-size: cover;
 }
-.review__components-svg2 {
+.review__components-svg4 {
   background-image: url("../images/satisfied_2.svg");
   background-size: cover;
 }
@@ -37,11 +37,11 @@
   background-image: url("../images/satisfied_3.svg");
   background-size: cover;
 }
-.review__components-svg4 {
+.review__components-svg2 {
   background-image: url("../images/satisfied_4.svg");
   background-size: cover;
 }
-.review__components-svg5 {
+.review__components-svg1 {
   background-image: url("../images/satisfied_5.svg");
   background-size: cover;
 }
