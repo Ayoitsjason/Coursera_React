@@ -7,7 +7,7 @@ import { LeaveReview } from "../api/WaitlistDataService";
 import { v1 as uuidv1 } from "uuid";
 
 const LeaveReviewComponent = (props) => {
-  const [radioValue, setRadioValue] = useState("1");
+  const [radioValue, setRadioValue] = useState("5");
   const [business, setBusiness] = useState("");
   const params = useParams();
 
@@ -16,11 +16,11 @@ const LeaveReviewComponent = (props) => {
   }, [params.business]);
 
   const radios = [
-    { value: "1" },
-    { value: "2" },
-    { value: "3" },
-    { value: "4" },
     { value: "5" },
+    { value: "4" },
+    { value: "3" },
+    { value: "2" },
+    { value: "1" },
   ];
 
   const onSubmit = (form) => {
