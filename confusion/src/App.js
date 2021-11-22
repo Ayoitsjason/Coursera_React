@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AuthenticatedRoute from "./components/authentication/AuthenticatedRoute.js";
 import Navigation from "./components/layout/Navigation.js";
 import Waitlist from "./components/waitlist/Waitlist";
 import Login from "./components/waitlist/Login";
@@ -8,7 +10,6 @@ import Signup from "./components/waitlist/Signup";
 import Nopage from "./components/Nopage";
 import AddGuestComponent from "./components/waitlist/AddGuestComponent";
 import ReviewsComponent from "./components/waitlist/ReviewsComponent";
-import { Component } from "react";
 import {
   isUserLoggedIn,
   isUserLoggedInBusiness,
@@ -52,15 +53,6 @@ class App extends Component {
             />
           )}
           <Route
-            path="/leavereview/:business"
-            element={
-              <LeaveReviewComponentWithNavigation
-                isLoggedIn={this.state.loggedIn}
-                updateAuth={this.updateAuth}
-              />
-            }
-          />
-          <Route
             path="/login"
             element={
               <LoginWithNavigation
@@ -80,13 +72,26 @@ class App extends Component {
             }
           />
           <Route
+            path="/leavereview/:business"
+            element={
+              <AuthenticatedRoute>
+                <LeaveReviewComponentWithNavigation
+                  isLoggedIn={this.state.loggedIn}
+                  updateAuth={this.updateAuth}
+                />
+              </AuthenticatedRoute>
+            }
+          />
+          <Route
             path="/reviews"
             element={
-              <ReviewsComponent
-                isLoggedIn={this.state.loggedIn}
-                updateAuth={this.updateAuth}
-                currentBusiness={this.state.currentBusiness}
-              />
+              <AuthenticatedRoute>
+                <ReviewsComponent
+                  isLoggedIn={this.state.loggedIn}
+                  updateAuth={this.updateAuth}
+                  currentBusiness={this.state.currentBusiness}
+                />
+              </AuthenticatedRoute>
             }
           />
           <Route path="*" element={<Nopage />} />
