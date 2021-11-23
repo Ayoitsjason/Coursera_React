@@ -65,10 +65,12 @@ class App extends Component {
           <Route
             path="/addguest"
             element={
-              <AddGuestComponentWithNavigation
-                isLoggedIn={this.state.loggedIn}
-                updateAuth={this.updateAuth}
-              />
+              <AuthenticatedRoute>
+                <AddGuestComponentWithNavigation
+                  isLoggedIn={this.state.loggedIn}
+                  updateAuth={this.updateAuth}
+                />
+              </AuthenticatedRoute>
             }
           />
           <Route
