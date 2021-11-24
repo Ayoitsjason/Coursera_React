@@ -49,7 +49,7 @@ const SplashComponent = () => {
                   Here at Tippin, we provide a way to streamline your customer
                   engagement. We provide a waiting list for your customers,
                   after their service is complete, they will receive a brief
-                  survey to let the business know how they are doing.
+                  survey to let your business know how its doing.
                 </p>
               </div>
             </div>
@@ -64,25 +64,23 @@ const SplashComponent = () => {
               <li>
                 <span className="icon solid major style1 fa-code"></span>
                 <h3>Waitlist</h3>
-                <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
-                </p>
+                <p>Waitlist for your business keeps more customers engaged.</p>
               </li>
               <li>
                 <span className="icon major style3 fa-copy"></span>
                 <h3>Review</h3>
                 <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
+                  Link your social Apps to our application. Customers that love
+                  your business will be navigated to your business review pages
+                  to leave 4 and 5 start reviews to attract other customers.
                 </p>
               </li>
               <li>
                 <span className="icon major style5 fa-gem"></span>
                 <h3>Reminder</h3>
                 <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
+                  Send a message to remind your customer when there turn is
+                  coming up.
                 </p>
               </li>
             </ul>
@@ -116,14 +114,6 @@ const SplashComponent = () => {
                 <strong>1,024</strong> Nullam
               </li>
             </ul>
-            <p className="content">
-              Having a waitlist for your business keeps more customers engaged.
-              They will be more willing to wait while they stay either stay in
-              store or be reminded if they decide to come back. Link your social
-              Apps to our application. Customers that love your business will be
-              navigated to your business review pages to leave 4 and 5 start
-              reviews to attract other customers.
-            </p>
             <footer className="major"></footer>
           </section>
 
