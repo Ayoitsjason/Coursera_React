@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import { Alert } from "react-bootstrap";
+import * as Yup from "yup";
 import { LoginOwner } from "../api/WaitlistDataService";
 import { registerSuccessfulLogin } from "../authentication/AuthenticationService";
 
@@ -20,6 +21,15 @@ const Login = ({ updateAuth, navigate }) => {
     }
   };
 
+  const LoginSchema = Yup.object().shape({
+    username: Yup.string()
+      .max(30, "Too Long! Max length 30 characters")
+      .required("Required"),
+    password: Yup.string()
+      .max(30, "Too Long! Max length 30 charasters")
+      .required("Required"),
+  });
+
   return (
     <div className="container">
       <h1 className="my-5">Login</h1>
@@ -33,18 +43,28 @@ const Login = ({ updateAuth, navigate }) => {
         validateOnChange={false}
         validateOnBlur={false}
         onSubmit={(values, { resetForm }) => onSubmit(values, resetForm)}
-        // validate={this.validate}
+        validationSchema={LoginSchema}
         enableReinitialize={true}
       >
-        {(props) => (
+        {({ errors, touched }) => (
           <Form>
             <fieldset className="form-group">
               <label>Username</label>
               <Field className="form-control" type="text" name="username" />
+              {errors.username && touched.username ? (
+                <Alert key="warning" variant="warning">
+                  {errors.username}
+                </Alert>
+              ) : null}
             </fieldset>
             <fieldset className="form-group">
               <label>Password</label>
               <Field className="form-control" type="text" name="password" />
+              {errors.password && touched.password ? (
+                <Alert key="warning" variant="warning">
+                  {errors.password}
+                </Alert>
+              ) : null}
             </fieldset>
             <button className="btn btn-primary" type="submit">
               Login
