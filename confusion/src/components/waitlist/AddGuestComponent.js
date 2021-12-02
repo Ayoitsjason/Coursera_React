@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { v1 as uuidv1 } from "uuid";
 import { Formik, Form, Field } from "formik";
-import { Button, Col, Row, ButtonGroup, ToggleButton } from "react-bootstrap";
+import * as Yup from "yup";
+import {
+  Button,
+  Col,
+  Row,
+  ButtonGroup,
+  ToggleButton,
+  Alert,
+} from "react-bootstrap";
 import SideNavigationComponent from "../layout/SideNavigationComponent";
 import { AddGuests } from "../api/WaitlistDataService";
 
@@ -24,6 +32,19 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
       navigate("/");
     }
   };
+
+  const GuestsSchema = Yup.object().shape({
+    firstName: Yup.string()
+      .max(30, "Too Long! Max length 30 characters")
+      .required("Required"),
+    lastName: Yup.string()
+      .max(30, "Too Long! Max length 30 charasters")
+      .required("Required"),
+    number: Yup.string().required("Required"),
+    email: Yup.string().required("Required"),
+    partySize: Yup.string().required("Required"),
+  });
+
   return (
     <div className="App">
       <Row className="m-0">
@@ -48,10 +69,10 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
               validateOnChange={false}
               validateOnBlur={false}
               onSubmit={onSubmit}
-              // validate={this.validate}
+              validationSchema={GuestsSchema}
               enableReinitialize={true}
             >
-              {(props) => (
+              {({ errors, touched }) => (
                 <Form>
                   <h4>Select your party size:</h4>
                   <ButtonGroup className="my-4">
@@ -82,6 +103,11 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
                       type="text"
                       name="firstName"
                     />
+                    {errors.firstName && touched.firstName ? (
+                      <Alert key="warning" variant="warning">
+                        {errors.firstName}
+                      </Alert>
+                    ) : null}
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Last Name</label>
@@ -90,14 +116,29 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
                       type="text"
                       name="lastName"
                     />
+                    {errors.lastName && touched.lastName ? (
+                      <Alert key="warning" variant="warning">
+                        {errors.lastName}
+                      </Alert>
+                    ) : null}
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Mobile number</label>
                     <Field className="form-control" type="text" name="number" />
+                    {errors.number && touched.number ? (
+                      <Alert key="warning" variant="warning">
+                        {errors.number}
+                      </Alert>
+                    ) : null}
                   </fieldset>
                   <fieldset className="form-group">
                     <label>Email address</label>
                     <Field className="form-control" type="text" name="email" />
+                    {errors.email && touched.email ? (
+                      <Alert key="warning" variant="warning">
+                        {errors.email}
+                      </Alert>
+                    ) : null}
                   </fieldset>
                   <Button className="btn btn-primary" type="submit">
                     Confirm
