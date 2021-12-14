@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Alert } from "react-bootstrap";
 import { RegisterOwner } from "../api/WaitlistDataService";
 
 const Signup = () => {
+  const [errorMessages, setErrorMessages] = useState("");
+
   const onSubmit = (values) => {
     let error = confirmPassword(values.password, values.password2);
-    console.log(error);
     if (error.length < 1) {
-      console.log(values);
+      RegisterOwner(values);
     } else {
-      return error;
+      setErrorMessages(error);
     }
   };
 
@@ -34,7 +35,7 @@ const Signup = () => {
       .min(6, "Too Short! Min Length 6 characters")
       .max(30, "Too Long! Max Length 30 characters")
       .required("Required"),
-    email: Yup.string().required("Required"),
+    email: Yup.string().email().required("Required"),
     businessName: Yup.string()
       .max(30, "Too long! Max Length 30 characters")
       .required("Required"),
@@ -42,7 +43,6 @@ const Signup = () => {
 
   function confirmPassword(password, password2) {
     let error = "";
-    console.log(password, password2);
     if (password !== password2) {
       error = "Passwords do not match!";
     }
@@ -52,6 +52,11 @@ const Signup = () => {
   return (
     <div className="container">
       <h1 className="my-5">Sign Up</h1>
+      {errorMessages ? (
+        <Alert key="danger" variant="danger">
+          {errorMessages}
+        </Alert>
+      ) : null}
       <Formik
         initialValues={{
           firstName: "",
