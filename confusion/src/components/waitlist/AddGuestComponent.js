@@ -41,7 +41,7 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
       .max(30, "Too Long! Max length 30 charasters")
       .required("Required"),
     number: Yup.string().required("Required"),
-    email: Yup.string().required("Required"),
+    email: Yup.string().email().required("Required"),
     partySize: Yup.string().required("Required"),
   });
 
