@@ -38,11 +38,16 @@ const AddGuestComponent = ({ isLoggedIn, updateAuth, navigate }) => {
       .max(30, "Too Long! Max length 30 characters")
       .required("Required"),
     lastName: Yup.string()
-      .max(30, "Too Long! Max length 30 charasters")
+      .max(30, "Too Long! Max length 30 characters")
       .required("Required"),
-    number: Yup.string().required("Required"),
+    number: Yup.string()
+      .min(10, "Too Short! Min length 10 characters")
+      .max(11, "Too Long! Max length 11 characters")
+      .required("Required"),
     email: Yup.string().email().required("Required"),
-    partySize: Yup.string().required("Required"),
+    partySize: Yup.string()
+      .max(2, "Too Long! Max length 2 characters")
+      .required("Required"),
   });
 
   return (
