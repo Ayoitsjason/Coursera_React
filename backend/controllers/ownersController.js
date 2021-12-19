@@ -1,7 +1,10 @@
 let users = [
   {
+    firstname: "",
+    lastname: "",
     username: "user",
     password: "password",
+    email: "",
     business: "royals",
   },
 ];
@@ -91,13 +94,23 @@ const deleteGuests = async (req, res) => {
 };
 
 const createOwner = async (req, res) => {
-  const { username, password } = req.body;
+  const { firstname, lastname, username, password, email, business } = req.body;
   const user = {
+    lastname,
     username,
     password,
+    email,
+    business,
+  };
+  const returnUser = {
+    firstname,
+    lastname,
+    username,
+    email,
+    business,
   };
   users.push(user);
-  res.status(201).json(user);
+  res.status(201).json(returnUser);
 };
 
 const loginOwner = async (req, res) => {
