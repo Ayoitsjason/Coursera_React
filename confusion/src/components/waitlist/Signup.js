@@ -17,10 +17,10 @@ const Signup = () => {
   };
 
   const SignUpSchema = Yup.object().shape({
-    firstName: Yup.string()
+    firstname: Yup.string()
       .max(20, "Too Long! Max length 20 characters")
       .required("Required"),
-    lastName: Yup.string()
+    lastname: Yup.string()
       .max(20, "Too Long! Max length 20 charasters")
       .required("Required"),
     username: Yup.string()
@@ -59,8 +59,8 @@ const Signup = () => {
       ) : null}
       <Formik
         initialValues={{
-          firstName: "",
-          lastName: "",
+          firstname: "",
+          lastname: "",
           username: "",
           password: "",
           password2: "",
@@ -77,19 +77,19 @@ const Signup = () => {
           <Form>
             <fieldset className="form-group">
               <label>First Name</label>
-              <Field className="form-control" type="text" name="firstName" />
-              {errors.firstName && touched.firstName ? (
+              <Field className="form-control" type="text" name="firstname" />
+              {errors.firstname && touched.firstname ? (
                 <Alert key="warning" variant="warning">
-                  {errors.firstName}
+                  {errors.firstname}
                 </Alert>
               ) : null}
             </fieldset>
             <fieldset className="form-group">
               <label>Last Name</label>
-              <Field className="form-control" type="text" name="lastName" />
-              {errors.lastName && touched.lastName ? (
+              <Field className="form-control" type="text" name="lastname" />
+              {errors.lastname && touched.lastname ? (
                 <Alert key="warning" variant="warning">
-                  {errors.lastName}
+                  {errors.lastname}
                 </Alert>
               ) : null}
             </fieldset>

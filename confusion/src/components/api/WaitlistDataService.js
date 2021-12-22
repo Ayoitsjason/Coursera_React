@@ -5,7 +5,7 @@ export const RegisterOwner = async (props) => {
   const body = JSON.stringify(props);
 
   const config = {
-    header: {
+    headers: {
       "Content-Type": "application/json",
     },
   };

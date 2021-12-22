@@ -94,22 +94,27 @@ const deleteGuests = async (req, res) => {
 };
 
 const createOwner = async (req, res) => {
-  const { firstname, lastname, username, password, email, business } = req.body;
+  const { firstname, lastname, username, password, email, businessName } =
+    req.body;
+
   const user = {
     lastname,
     username,
     password,
     email,
-    business,
+    businessName,
   };
+
   const returnUser = {
     firstname,
     lastname,
     username,
     email,
-    business,
+    businessName,
   };
+
   users.push(user);
+
   res.status(201).json(returnUser);
 };
 
