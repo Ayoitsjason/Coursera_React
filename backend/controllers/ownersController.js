@@ -115,7 +115,7 @@ const createOwner = async (req, res) => {
 
   users.push(user);
 
-  res.status(201).json(returnUser);
+  res.status(201).json({ owner: returnUser });
 };
 
 const loginOwner = async (req, res) => {

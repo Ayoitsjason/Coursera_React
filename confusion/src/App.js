@@ -37,6 +37,7 @@ class App extends Component {
   render() {
     const WaitlistWithNavigation = withNavigation(Waitlist);
     const LoginWithNavigation = withNavigation(Login);
+    const SignupWithNavigation = withNavigation(Signup);
     const AddGuestComponentWithNavigation = withNavigation(AddGuestComponent);
     const LeaveReviewComponentWithNavigation =
       withNavigation(LeaveReviewComponent);
@@ -61,7 +62,7 @@ class App extends Component {
               />
             }
           />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<SignupWithNavigation />} />
           <Route
             path="/addguest"
             element={

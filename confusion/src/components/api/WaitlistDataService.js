@@ -11,7 +11,12 @@ export const RegisterOwner = async (props) => {
   };
 
   try {
-    await axios.post("http://localhost:8000/api/owner/register", body, config);
+    const res = await axios.post(
+      "http://localhost:8000/api/owner/register",
+      body,
+      config
+    );
+    return res.data.owner;
   } catch (err) {
     console.error(err);
   }

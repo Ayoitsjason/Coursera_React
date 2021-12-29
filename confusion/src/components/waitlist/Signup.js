@@ -4,13 +4,14 @@ import * as Yup from "yup";
 import { Alert } from "react-bootstrap";
 import { RegisterOwner } from "../api/WaitlistDataService";
 
-const Signup = () => {
+const Signup = (props) => {
   const [errorMessages, setErrorMessages] = useState("");
 
   const onSubmit = (values) => {
     let error = confirmPassword(values.password, values.password2);
     if (error.length < 1) {
-      RegisterOwner(values);
+      const owner = RegisterOwner(values);
+      if (owner) props.navigate("/");
     } else {
       setErrorMessages(error);
     }
